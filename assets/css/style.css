@@ -1,3 +1,37 @@
+@-webkit-keyframes fade-in {   0% { opacity: 0; }   100% { opacity: 1; }   }
+@-moz-keyframes    fade-in {   0% { opacity: 0; }   100% { opacity: 1; }   }
+@-o-keyframes      fade-in {   0% { opacity: 0; }   100% { opacity: 1; }   }
+@keyframes         fade-in {   0% { opacity: 0; }   100% { opacity: 1; }   }
+ 
+body {
+	-webkit-animation: fade-in 350ms linear; /* Safari 4+ */
+	-moz-animation: fade-in 350ms linear; /* Fx 5+ */
+	-o-animation: fade-in 350ms linear; /* Opera 12+ */
+	animation: fade-in 350ms linear; /* IE 10+, Fx 29+ */
+}
+
+
+/* Width */
+::-webkit-scrollbar {
+   width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+   background: #4C4C4C;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+   background: #6B6B6B;
+   border-radius: 13px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+   background: #848484;
+}
+
 body, head{cursor: default;}
 
 h1 { font-size: 2em; margin: 0.67em 0; }
