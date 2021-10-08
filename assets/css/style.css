@@ -10,6 +10,10 @@ body {
 	animation: fade-in 350ms linear; /* IE 10+, Fx 29+ */
 }
 
+p {
+	font-size: 16.9px;
+}
+
 ::selection {
    background: white; /* background default color */
    color: black; /* Foreground default color */
