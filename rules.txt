@@ -1,0 +1,7 @@
+https=1
+domain=kay-software.ru
+source=kay-server.github.io
+main=/index.html
+404page=/404.html
+google_verification=/google81673be47c6eda73.html
+yandex_verification=/yandex_32b1e357bcf57aae.html
