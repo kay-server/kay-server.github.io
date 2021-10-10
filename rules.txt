@@ -1,4 +1,8 @@
 https=1
+ip=185.199.108.153
+ip2=185.199.109.153
+ip3=185.199.110.153
+ip4=185.199.111.153
 domain=kay-software.ru
 source=kay-server.github.io
 main=/index.html
