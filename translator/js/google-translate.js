@@ -17,7 +17,7 @@ const googleTranslateConfig = {
 	/* domain: "Get-Web.Site" */
 };
 
-document.addEventListener("DOMContentLoaded", (event) => {
+$(function () {
 	/* Подключаем виджет google translate */
 	/* Connecting the google translate widget */
 	let script = document.createElement("script");
@@ -30,7 +30,7 @@ function TranslateWidgetIsLoaded() {
 }
 
 function TranslateInit(config) {
-	if (config.langFirstVisit && !Cookies.get("googtrans")) {
+	if (config.langFirstVisit && !$.cookie("googtrans")) {
 		/* Если установлен язык перевода для первого посещения и куки не назначены */
 		/* If the translation language is installed for the first visit and cookies are not assigned */
 		TranslateCookieHandler("/auto/" + config.langFirstVisit);
@@ -54,9 +54,9 @@ function TranslateInit(config) {
 
 	/* Вешаем событие  клик на флаги */
 	/* Assigning a handler to the flags */
-	TranslateEventHandler("click", "[data-google-lang]", function (e) {
+	$("[data-google-lang]").click(function () {
 		TranslateCookieHandler(
-			"/" + config.lang + "/" + e.getAttribute("data-google-lang"),
+			"/auto/" + $(this).attr("data-google-lang"),
 			config.domain
 		);
 		/* Перезагружаем страницу */
@@ -69,8 +69,8 @@ function TranslateGetCode(config) {
 	/* Если куки нет, то передаем дефолтный язык */
 	/* If there are no cookies, then we pass the default language */
 	let lang =
-		Cookies.get("googtrans") != undefined && Cookies.get("googtrans") != "null"
-			? Cookies.get("googtrans")
+		$.cookie("googtrans") != undefined && $.cookie("googtrans") != "null"
+			? $.cookie("googtrans")
 			: config.lang;
 	return lang.match(/(?!^\/)[^\/]*$/gm)[0];
 }
@@ -78,36 +78,25 @@ function TranslateGetCode(config) {
 function TranslateCookieHandler(val, domain) {
 	/* Записываем куки /язык_который_переводим/язык_на_который_переводим */
 	/* Writing down cookies /language_for_translation/the_language_we_are_translating_into */
-	Cookies.set("googtrans", val);
-	Cookies.set("googtrans", val, {
+	$.cookie("googtrans", val);
+	$.cookie("googtrans", val, {
 		domain: "." + document.domain,
 	});
 
 	if (domain == "undefined") return;
 	/* записываем куки для домена, если он назначен в конфиге */
 	/* Writing down cookies for the domain, if it is assigned in the config */
-	Cookies.set("googtrans", val, {
+	$.cookie("googtrans", val, {
 		domain: domain,
 	});
 
-	Cookies.set("googtrans", val, {
+	$.cookie("googtrans", val, {
 		domain: "." + domain,
-	});
-}
-
-function TranslateEventHandler(event, selector, handler) {
-	document.addEventListener(event, function (e) {
-		let el = e.target.closest(selector);
-		if (el) handler(el);
 	});
 }
 
 function TranslateHtmlHandler(code) {
 	/* Получаем язык на который переводим и производим необходимые манипуляции с DOM */
 	/* We get the language to which we translate and produce the necessary manipulations with DOM */
-	if (document.querySelector('[data-google-lang="' + code + '"]') !== null) {
-		document
-			.querySelector('[data-google-lang="' + code + '"]')
-			.classList.add("language__img_active");
-	}
+	$('[data-google-lang="' + code + '"]').addClass("language__img_active");
 }

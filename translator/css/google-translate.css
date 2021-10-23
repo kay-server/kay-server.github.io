@@ -29,8 +29,8 @@ body {
 
 .language {
     position: fixed;
-    left: 10px;
-    top: 50%;
+    left: -2px;
+    top: 90%;
     transform: translateY(-50%);
     z-index: 999;
     display: flex;
@@ -38,9 +38,10 @@ body {
 }
 
 .language__img {
-    margin: 2px;
+    width: 55%;
+    margin: 2.5px;
     cursor: pointer;
-    opacity: .5;
+    opacity: .3;
 }
 
 .language__img:hover,
