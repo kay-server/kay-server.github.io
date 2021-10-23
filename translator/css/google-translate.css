@@ -13,9 +13,9 @@ body {
 
 /* Прячем панель гугла */
 
-/*.skiptranslate {
+.skiptranslate {
     display: none !important;
-}*/
+}
 
 /* Убираем подсветку ссылок */
 
