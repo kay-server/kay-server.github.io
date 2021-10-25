@@ -1,9 +1,3 @@
-/*!***************************************************
- * google-translate.js v1.0.4
- * https://Get-Web.Site/
- * author: Vitalii P.
- *****************************************************/
-
 const googleTranslateConfig = {
 	/* Original language */
 	lang: "ru",
