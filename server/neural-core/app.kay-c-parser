@@ -1,0 +1,96 @@
+include link web
+include link neuro
+include link kay
+include link kay-servers
+include link kay-servers-api
+include link kay-servers-api-health
+include link kay-servers-api-diagnostics
+
+~!_0:"get_Message" .Current
+ "response":"1":
+{
+#key=sa-m.locales<<testpool
+$ok.[
+MSG{.usr_db !!Contains key_public[.rsd_db.valid]}:
+ !_send "#NO_ACCESS":
+  log "Permissions error!"
+]>CORE}.@API>"KS_:LIBRARY"
+
+CORE:
+                 0x001
+ | ENTRY_POINT ::0x002
+ | PORT_LOADER ::0x003
+ | PROJ0_START ::0x004
+ | PROJ1_START ::0x005
+ | LIBS_LOADER
+!~"console.Shell"
+
+API:
+server=<"https://kay-software.ru/rules.txt":
+ _CFG:
+{
+#//
+<neural cmd="1.4">
+ <logic data=[&<,&>] />
+ <key_a1>0f029av823n1b48x9a02c92n4u6:9s9a03n1b</key_a1>
+ <set>~3:1:93: 14 15 63 95 348 192 94</set>
+</neural>
+#\\
+}
+!~"console.Send"
+
+ENTRY_POINT $:NEXT
+!msg=<val(FR API."neural")
+MSG{.usr_db Contains key_public[.rsd_db.valid]}:
+ !_send "0":
+  log $KS_:LIBRARY SendResult::DataSet
+DataType for DataSet
+err_lvl=<_send.get[%U.{~0-*}]
+sa-m.locales.index<DataType FR ".$err_lvl"
+em-s>sa-m,~0&15<em-s={
+ delay=<600|$int|tmp=<get;set
+}ds-r.local_cmd.Shell[em-s.#]::<neuro?add>
+ @_!TMP-0x01 ?U&CREATE neural-x{+} init DataType{neuro,_x{"0a-b"}}
+  TMP-0x01 ?U&CREATE neural-y{+} init DataType{neuro,_y{"$<_build{!empty}".result}>nul}
+ !_@
+_ds-r.rules{
+ .format "$-0-15.\[10],i=4'i',<'<','>'~seed"{..:_build}["neural"] "set"
+ .format$ "!(1[~2[3[-4[5[6.s[7[8[9[*index.{val}]=>nul]],5],10],15],20],25],35])"
+ .format$1 "[~>{' '}]" "x2" "!=5"
+}
+#*/
+neural-x:10~##list:
+  "|1!" "2" ".3\4" "5" "6" "_7" "8-" "9-" {.seed}:
+   ">! .&a&&b^>natives\gen"
+neural-n:50*x.locales(~0)
+$i<10:neural-n.index():
+ ^+10==|10,15!!![*4]
+        20,27!![*3&^4]
+        45,50![*2&^3]
+        55,>./
+        100!~0-1,"key=":#+1[else:-1]
+    @neural-n.index(add) list "%%s{$this}" "console.Shell(cmd{^"":#-1[&-2:2]^""})"
+    <#:>!=&+1:\ENTRY_POINT "{%%s{$this.index}}":
+	[
+10==0 100=0 1100=0 11000=1!~@nul>001:
+ 01==1 001=1 0011=1 00111=0!~:
+  11==1 111=1 1111=1 11111=0!~;
+ #>00==0 000 =0
+$ _\(2) [:_arg] --API[~0{"response";"get"}]{_x}
+ _x: !".tmp"<"$*{LIBS_LOADER\\}"&
+_build:.seed<_&$&|0|10|>seed.book="_arg.{result !index~$(DataSet)_ds-r.rules}":
+  \0|[+1,:#..list].namespace "neuro.\{ref<$CORE}" FR PROJ0_START,PROJ1_START:
+    #.\1<"$-5-0.\a{!>'1< FR :#[{+&&-}1]'}";
+ref=><nul\(([%%s]*.seed^>):!~>1{"x2 x1 x3 0 0 0"||".seed\CORE"})
+ref(if).+1&^>,!<<true;(if).-1&^<!<<false
+_build console.Shell ~>0|*5*neural-x./val[val.%%s.index(#"x2\.\.\.7\!seed")]
+ !1 _build console.Send PORT_LOADER "~#<.^result+'%s[@return=<format]'>."
+  !2 _build console.Send PORT_LOADER "../$empty"
+   !3 _build nul\(seed([%%s]*.seed^>):!~>1{"x2 x1 x3 0 0 0"}){.format} ~!_0:"send_Message"
+]
+#*\,next:
+$$
+~<!val.seed[collection:=console.Shell]>web-services[API]{server,x}
+ x: !".callback"<"$*{server.Response}":
+  server "<neural^"
+$$>.Current|return
