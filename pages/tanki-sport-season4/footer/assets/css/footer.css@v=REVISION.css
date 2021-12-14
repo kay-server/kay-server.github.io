@@ -1,0 +1,159 @@
+a {
+    text-decoration: none;
+}
+
+.footer {
+    min-width: 300px;
+}
+
+.footer__text, .footer__button {
+    vertical-align: top !important;
+    display: inline-block;
+}
+
+.footer__text {
+    float: left;
+    width: 600px;
+}
+
+.footer__sprite {
+    background-image: url(../images/sprite.png);
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 2px 0 0 0;
+}
+
+.icon-facebook {
+    background-position: 0px 0px;
+}
+
+.icon-googleplus {
+    background-position: -40px 0px;
+}
+
+.icon-inst {
+    background-position: 0px -40px;
+}
+
+.icon-discord {
+    background-position: -40px -40px;
+}
+
+.icon-twitter {
+    background-position: -80px 0px;
+}
+
+.icon-vk {
+    background-position: -80px -40px;
+}
+
+.icon-you {
+    background-position: 0px -80px;
+}
+
+.icon-telegram {
+    background-position: -80px -80px;
+}
+
+.icon-odnoklassniki {
+    background-position: -40px -80px;
+}
+
+@media screen and (min-width: 1170px) {
+
+    .footer__text {
+        float: left;
+        width: 607px;
+        left: 0;
+        top: 494px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1169px) {
+    .footer__text {
+        float: left;
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer__text {
+        float: left;
+        width: 320px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer {
+        display: table;
+    }
+
+    .footer__text {
+        display: table-footer-group;
+        width: 300px;
+        float: none;
+    !important;
+    }
+
+
+    .footer__button {
+        display: table-header-group;
+        float: none;
+    !important;
+    }
+}
+
+.icon-vk, .icon-facebook, .icon-googleplus, .icon-inst, .icon-twitter, .icon-you, .icon-discord, .icon-telegram, .icon-odnoklassniki {
+    transform-style: preserve-3d;
+}
+
+.icon-vk:after,
+.icon-facebook:after,
+.icon-googleplus:after,
+.icon-inst:after,
+.icon-twitter:after,
+.icon-you:after,
+.icon-odnoklassniki:after,
+.icon-telegram:after
+.icon-discord:after {
+    top: -100%;
+    left: 0px;
+    width: 100%;
+    position: absolute;
+    background: #3a9999;
+    border-radius: 5px;
+    content: '';
+    transform-origin: left bottom;
+    transform: rotateX(90deg);
+}
+
+.icon-vk:hover,
+.icon-facebook:hover,
+.icon-googleplus:hover,
+.icon-inst:hover,
+.icon-twitter:hover,
+.icon-you:hover,
+.icon-odnoklassniki:hover,
+.icon-telegram:hover,
+.icon-discord:hover {
+    animation: bounce 1s;
+}
+
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+    80% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+
+
+

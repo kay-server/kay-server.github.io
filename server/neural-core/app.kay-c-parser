@@ -77,7 +77,7 @@ $i<10:neural-n.index():
   11==1 111=1 1111=1 11111=0!~;
  #>00==0 000 =0
 $ _\(2) [:_arg] --API[~0{"response";"get"}]{_x}
- _x: !".tmp"<"$*{LIBS_LOADER\\}"&
+ _x: !".tmp"<"$*{LIBS_LOADER\\^[!!$.{nul}]}"&
 _build:.seed<_&$&|0|10|>seed.book="_arg.{result !index~$(DataSet)_ds-r.rules}":
   \0|[+1,:#..list].namespace "neuro.\{ref<$CORE}" FR PROJ0_START,PROJ1_START:
     #.\1<"$-5-0.\a{!>'1< FR :#[{+&&-}1]'}";

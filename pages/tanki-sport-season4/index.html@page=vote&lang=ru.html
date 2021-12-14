@@ -1,0 +1,379 @@
+
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TankiSport 2021 Сезон IV</title>
+	<meta itemprop="name" content="TankiSport 2021 Сезон IV">
+	<meta property="og:title" content="TankiSport 2021 Сезон IV">
+	<meta itemprop="description" content="TankiSport 2021 Сезон IV">
+	<meta property="og:description" content="TankiSport 2021 Сезон IV">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="icon" type="image/ico" href="favicon.ico">
+
+	<script>
+    var LANG = 'ru'
+	</script>
+
+	<script src="assets/scripts/jquery-3.4.1.min.js"></script>
+	<script src="assets/scripts/site.js@=REVISION"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css@v=REVISION.css">
+	<link rel="stylesheet" type="text/css" href="footer/assets/css/footer.css@v=REVISION.css">
+
+		<noscript>
+		<meta http-equiv="refresh" content="0; URL=noscript.html">
+	</noscript>
+</head>
+<body class="d-flex flex-column">
+
+<div class="footer-gradient"></div>
+
+<div class="loaderArea">
+	<div class="loader">
+		<svg class="loading-spinner" style="margin-top: calc(50vh - 40px)" x="0" y="0" width="80" height="80" viewBox="0 0 40 40">
+			<path fill="#87d704" opacity="0.25" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946 s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634 c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"></path>
+			<path fill="#87d704" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0 C22.32,8.481,24.301,9.057,26.013,10.047z" transform="rotate(25.5667 20 20)">
+				<animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="0.7s" repeatCount="indefinite"></animateTransform>
+			</path>
+		</svg>
+	</div>
+</div>
+
+<script>
+  $(window).on('load', function () {
+    $preloader = $('.loaderArea'),
+      $loader = $preloader.find('.loader');
+    $loader.fadeOut();
+    $preloader.delay(500).fadeOut('slow');
+  });
+</script>
+<div class="background-image-tanks"></div>
+
+<header class="py-3 header">
+	<div class="container">
+		<div class="row align-items-center" id="header">
+							<div class="col-md-auto col mb-4 mb-sm-0 order-0">
+					<img src="assets/images/logo.png" alt="logo" class="mw-100">
+				</div>
+
+				<div class="col-md-auto col px-0 px-sm-3 mb-4 mb-sm-0 order-1">
+					<div><div id="langs" class="top-line__langs"><div class="custom-select js-custom-select"><div class="custom-select__arrow sprite sprite_custom-select-arrow"></div><div class="custom-select__active js-active" data-url="?lang=ru"><div class="top-line__lang"><i class="flag flag_ru"></i></div></div></div><div class="custom-select__options js-options" style="display:none"><div class="custom-select__option js-option" data-url="?page=vote&lang=de"><div class="top-line__lang"><i class="flag flag_de"></i></div></div><div class="custom-select__option js-option" data-url="?page=vote&lang=pl"><div class="top-line__lang"><i class="flag flag_pl"></i></div></div><div class="custom-select__option js-option" data-url="?page=vote&lang=en"><div class="top-line__lang"><i class="flag flag_en"></i></div></div></div>
+        <link rel="stylesheet" type="text/css" href="langs/assets/css/flags.css@v=%253C%253F=%2520REVISION%3B%2520%253F%253E.css">
+        <script src="langs/assets/js/main.js@v=%253C%253F=%2520REVISION%3B%2520%253F%253E"></script>
+    </div></div>
+				</div>
+
+				<div class="mx-auto d-flex flex-row flex-wrap text-uppercase font-weight-bold z-ind-1 justify-content-center col-12 col-md-auto mb-4 mb-md-0 mt-3 mt-md-0 order-5 order-md-2">
+					<a href="index.html@lang=ru.html" class="header-link">Танкофонд</a>
+					<a href="index.html@page=vote&amp;lang=ru.html" class="header-link active position-relative ml-4">Голосование</a>
+				</div>
+
+				<div class="col-auto ml-auto ml-sm-0 ml-md-auto order-2 order-md-3 px-0 px-sm-3 d-none" id="user_clan"></div>
+
+				<div class="col-auto d-none flex-column pl-0 order-3 order-md-4" id="container-header"></div>
+
+				<div class="col col-md-auto order-sm-4 order-1 mb-4 mb-sm-0 text-center order-4 order-md-5" id="login_or_logout">
+					<button class="button-open" id='aut' data-modal-trigger="trigger-1" onclick="toggleModal();">Войти</button>
+
+					<div id="modal-aut" data-modal="trigger-1" class="modal_login">
+						<form id="modal-content-wrapper" class="content-wrapper">
+							<button class="close"></button>
+							<div id="header-auth" class="text-uppercase">Авторизуйся в «Танках Онлайн», чтобы поддержать любимую команду</div>
+
+							<div id="login-label">Твой никнейм</div>
+							<input name="login" type="text" id="login-auth">
+
+							<div id="password-label">Пароль</div>
+							<input name="password" type="password" id="password-auth">
+
+							<div class="g-recaptcha" data-sitekey="6LeV5AITAAAAAI3U1V8jsU-bsPuSqjKa4th1Zy7a"></div>
+
+							<div onclick="onClickAuth('form_auth')" class="button_green_auth">Войти</div>
+						</form>
+					</div>
+
+					<div id="modal-aut2" data-modal="trigger-1" class="modal_login">
+						<form id="modal-content-wrapper2" class="content-wrapper">
+							<button class="close"></button>
+							<div id="header-auth" class="text-uppercase">Авторизуйся в «Танках Онлайн», чтобы поддержать любимую команду</div>
+
+							<div id="twoFA-label">Двухфакторная аутентификация</div>
+							<input name="twoFA" type="text" id="twoFA-auth">
+
+							<div class="g-recaptcha" data-sitekey="6LeV5AITAAAAAI3U1V8jsU-bsPuSqjKa4th1Zy7a"></div>
+							<div onclick="onClickAuth('form_auth_twofa')" class="button_green_auth">Войти</div>
+						</form>
+					</div>
+				</div>
+			
+
+		</div>
+	</div>
+</header>
+
+<div class="container-fluid block_commands pb-5">
+	<div class="container mb-5 py-5">
+		<div class="row text-center text-md-left">
+
+			<div class="col-lg-auto col-md-5 col-12 ml-lg-auto">
+				<img src="assets/images/shield.png" alt="shield" class="mw-100">
+			</div>
+
+			<div class="col-md-6 col-lg-7 col-12 d-flex flex-column mr-auto mt-3 mt-sm-0">
+				<span class="mt-2">TankiSport 2021 Сезон IV — это битвы среди лучших кланов TO. Из 8 команд, выигравших приглашение на турнир, осталось всего 4! В честь финалистов турнира мы будем продавать тематические спецпредложения, запустим голосование за победителей, разыграем «Танкофонд», а также раздадим классные призы! Подробности.</span>
+				<a href="https://tankionline.com/ru/?p=44493" class="mt-3" target="_blank"><button class="btn btn-red mt-3 mt-md-auto mx-auto mx-md-0  cursor-pointer">Подробности</button></a>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid background-pink pt-5">
+	<div class="container d-flex flex-column">
+		<h2 class="font-weight-bold text-uppercase text-center">Голосование</h2>
+
+		<span class="text-center text-grey mt-1 px-md-5 z-ind-1">Голосуй за результаты матчей с 05:00 МСK 14 декабря до 20:00 МСК 19 декабря и получайте призы! <a href="https://tankionline.com/ru/?p=44493" class="vote_link_info" target="_blank">Подробности.</a></span>
+
+		<div class="d-flex flex-column rounded px-3 pb-4">
+
+			<form action="index.html@page=vote&amp;lang=ru.html" id="form_voting" class="row align-items-center justify-content-center my-3">
+				<div class="col-5 px-1 px-md-3">
+											<input type="radio" name="command" id="command_one" class="d-none" value="bulls">
+										<label for="command_one" class="position-relative cursor-pointer">
+						<img src="assets/images/logo_bulls.png" alt="-clan" class="mw-100">
+						<div class="like rounded-circle mx-auto d-flex">
+							<img src="assets/images/check_mark.png" alt="check" class="mw-100 m-auto">
+						</div>
+					</label>
+				</div>
+
+				<div class="col-2 d-flex flex-column px-0 px-md-3">
+					<div>
+						<img src="assets/images/vs.png" alt="vs" class="mw-100">
+					</div>
+					<span class="text-center font-weight-bold">14.12</span>
+				</div>
+
+				<div class="col-5 px-1 px-md-3">
+											<input type="radio" name="command" id="command_two" class="d-none"  value="step_brothers">
+					
+					<label for="command_two" class="position-relative cursor-pointer">
+						<img src="assets/images/logo_step_brothers.png" alt="clan" class="mw-100">
+						<div class="like rounded-circle mx-auto d-flex">
+							<img src="assets/images/check_mark.png" alt="check" class="mw-100 m-auto">
+						</div>
+					</label>
+				</div>
+				<input type="text" class="d-none" name="username" value="" id="form_username">
+				<input type="text" class="d-none" name="hash" value="" id="form_hash">
+			</form>
+
+			<div class="col-12 justify-content-center d-flex" id="voting_act">
+									<button class="btn btn-success text-uppercase font-weight-bold px-4" data-modal-trigger="trigger-1" onclick="toggleModal();">Войти</button>
+							</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid background-pink-end z-ind-1">
+	<div class="container">
+		<h2 class="font-weight-bold text-uppercase text-center mt-5">Прямая трансляция</h2>
+		<div class="d-flex flex-column mt-3 position-relative video">
+			<iframe class="mw-100 video" src="https://www.youtube.com/embed/zoFtuD42sf4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>		</div>
+	</div>
+</div>
+
+<div class="container mb-5">
+
+	<h2 class="font-weight-bold text-uppercase text-center mt-5">Турнирная таблица</h2>
+	<div class="row px-3">
+		<!--	Cтрока 1-->
+		<div class="col-lg-4 col-12 py-3 order-1">
+			<div class="row align-items-center text-center">
+				<div class="col-lg-4 col-5 p-0 d-flex justify-content-center align-items-center tournament-command">
+					<img src="assets/images/logo_bulls.png" alt="clan" class="mw-100">
+				</div>
+				<div class="col-lg-auto col-2 d-flex flex-column px-1 px-md-3">
+					<img src="assets/images/vs_mini.png" alt="vs" class="mw-100">
+					<span>14.12</span>
+				</div>
+				<div class="col-lg-4 col-5 p-0 d-flex justify-content-center align-items-center tournament-command">
+					<img src="assets/images/logo_step_brothers.png" alt="clan" class="mw-100">		</div>
+			</div>
+		</div>
+
+		<div class="col-lg-4 col-12 py-3 table_line_one order-lg-2 order-4">
+			<div class="row align-items-center text-center">
+				<div class="col-lg-4 col-5 transform-ty p-0 d-flex justify-content-center align-items-center tournament-command">
+					<img src="assets/images/clan_none_three.png" alt="clan" class="shield-mini">
+				</div>
+				<div class="col-lg-auto col-2 d-flex flex-column transform-ty-vs px-1 px-md-3">
+					<img src="assets/images/vs_mini.png" alt="vs" class="mw-100">
+					<span>17.12</span>
+				</div>
+				<div class="col-lg-4 col-5 transform-ty p-0 d-flex justify-content-center align-items-center tournament-command">
+					<img src="assets/images/clan_none_three.png" alt="clan" class="shield-mini">
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-4 d-none d-lg-block py-3 position-relative table_line_two order-lg-3 transform-ty"></div>
+
+		<!--	Cтрока 2-->
+		<div class="col-lg-4 col-12 py-3 order-lg-4 order-2">
+			<div class="row align-items-center text-center">
+				<div class="col-lg-4 col-5 p-0 d-flex justify-content-center align-items-center tournament-command ">
+					<img src="assets/images/logo_team_pointers.png" alt="clan" class="mw-100">
+				</div>
+				<div class="col-lg-auto col-2 d-flex flex-column px-1 px-md-3">
+					<img src="assets/images/vs_mini.png" alt="vs" class="mw-100">
+					<span>15.12</span>
+				</div>
+				<div class="col-lg-4 col-5 p-0 d-flex justify-content-center align-items-center tournament-command">
+					<img src="assets/images/logo_carnage.png" alt="clan" class="mw-100">
+				</div>
+			</div>
+		</div>
+
+		<div class="col-4 d-none d-lg-block py-3 position-relative table_line_three order-lg-5"></div>
+
+		<div class="col-lg-4 col-12 py-3 order-lg-6 order-6">
+			<div class="row align-items-center text-center">
+				<div class="col-lg-4 col-5 transform-ty-two p-0 d-flex justify-content-center align-items-center tournament-command">
+					<img src="assets/images/clan_none_three.png" alt="clan" class="shield-mini">
+				</div>
+				<div class="col-lg-auto col-2 d-flex flex-column transform-ty-two-vs px-1 px-md-3">
+					<img src="assets/images/vs_mini.png" alt="vs" class="mw-100">
+					<span>19.12</span>
+				</div>
+				<div class="col-lg-4 col-5 transform-ty-two p-0 d-flex justify-content-center align-items-center tournament-command">
+					<img src="assets/images/clan_none_three.png" alt="clan" class="shield-mini">
+				</div>
+			</div>
+		</div>
+
+		<!--	Cтрока 3-->
+		<div class="col-lg-4 col-12 py-3 order-lg-7 order-3">
+			<div class="row align-items-center text-center">
+				<div class="col-lg-4 col-5 p-0 d-flex justify-content-center align-items-center tournament-command">
+					<img src="assets/images/clan_none_three.png" alt="clan" class="shield-mini">
+				</div>
+				<div class="col-lg-auto col-2 d-flex flex-column px-1 px-md-3">
+					<img src="assets/images/vs_mini.png" alt="vs" class="mw-100">
+					<span>16.12</span>
+				</div>
+				<div class="col-lg-4 col-5 p-0 d-flex justify-content-center align-items-center tournament-command">
+					<img src="assets/images/clan_none_three.png" alt="clan" class="shield-mini">
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-4 col-12 py-3 position-relative table_line_four order-lg-8 order-5">
+			<div class="row align-items-center text-center">
+				<div class="col-lg-4 col-5 p-0 d-flex justify-content-center align-items-center tournament-command">
+					<img src="assets/images/clan_none_three.png" alt="clan" class="shield-mini">
+				</div>
+				<div class="col-lg-auto col-2 d-flex flex-column px-1 px-md-3">
+					<img src="assets/images/vs_mini.png" alt="vs" class="mw-100">
+					<span>18.12</span>
+				</div>
+				<div class="col-lg-4 col-5 p-0 d-flex justify-content-center align-items-center tournament-command">
+					<img src="assets/images/clan_none_three.png" alt="clan" class="shield-mini">
+				</div>
+			</div>
+		</div>
+
+		<div class="col-4 d-none d-lg-block py-3 position-relative table_line_five order-lg-9"></div>
+	</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-md modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title text-center w-100" id="exampleModalLabel">Призы</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body d-flex flex-row flex-wrap text-center">
+				<div class="col-12">
+						Купи краску клана в Магазине, чтобы завершить авторизацию на лендинге и поучаствовать в голосовании				</div>
+				<div class="col-6 mt-3">
+					<img src="assets/images/Clan_1_Preview.png" alt="paint" class="mw-100">
+				</div>
+				<div class="col-6 mt-3">
+					<img src="assets/images/Clan_2_Preview.png" alt="paint" class="mw-100">
+				</div>
+				<div class="col-6">
+					<img src="assets/images/Clan_3_Preview.png" alt="paint" class="mw-100">
+				</div>
+				<div class="col-6">
+					<img src="assets/images/Clan_4_Preview.png" alt="paint" class="mw-100">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="Modal_error" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title text-center w-100" id="exampleModalLabel">Ошибка</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body d-flex flex-column">
+				<span class="text-center">Не удалось проголосовать.</span>			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="py-3">
+						<div class="container">
+										<a href="https://discord.com/invite/tankisport" target="_blank">
+									<div class="footer-discorde d-flex flex-row align-items-center p-3 mb-5">
+											<div class="col-sm-5 col-md-4 offset-lg-1 d-none d-sm-block">
+												<img src="assets/images/footer_discord_big.png" alt="logo" class="mw-100">
+											</div>
+											<div class="col-12 col-sm-7 col-md-6 text-white">
+												<span>Смотри трансляции вместе с другими танкистами, обсуждай голосование и погружайся в мир киберспорта на нашем киберспортивном сервере Discord!</span>
+											</div>
+									</div>
+								</a>
+									<div class="row">
+								<div class="col-md-7 col-12 text-center text-md-left d-flex flex-column">
+									<span>© ООО «Альтернатива Гейм» 2010–2021. Все права защищены.</span>
+								</div>
+								<div class="col-auto ml-auto text-center text-md-left mr-md-0 mr-auto mt-2 mt-sm-0">
+		                <div class="footer__button"><a href="https://vk.com/tankionline" target="_blank">
+                        <div class="footer__sprite icon-vk"></div>
+                    </a><a href="https://facebook.com/ru.tankionline/" target="_blank">
+                        <div class="footer__sprite icon-facebook"></div>
+                    </a><a href="https://youtube.com/user/tankionline" target="_blank">
+                        <div class="footer__sprite icon-you"></div>
+                    </a><a href="https://instagram.com/tankionline_ru/" target="_blank">
+                        <div class="footer__sprite icon-inst"></div>
+                    </a><a href="https://odnoklassniki.ru/tankionline" target="_blank">
+                        <div class="footer__sprite icon-odnoklassniki"></div>
+                    </a></div>
+								</div>
+							</div>
+						</div>
+					</footer>
+<link rel="stylesheet" href="modal/modal.css@v=REVISION.css">
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="assets/scripts/bootstrap/bootstrap.js"></script>
+
+<script>
+  $('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+  });
+</script>
+<script src="modal/modal.js"></script>
+<script src="assets/scripts/main.js"></script>
+</body>
+</html>

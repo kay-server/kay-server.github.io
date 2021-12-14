@@ -1,0 +1,167 @@
+.custom-select {
+    position: relative;
+    overflow: visible;
+    opacity: 0.95
+}
+
+.custom-select__active {
+    height: 32px;
+    cursor: pointer;
+    opacity: 1
+}
+
+.active .sprite_custom-select-arrow {
+    transform: rotate(180deg);
+}
+
+.active .custom-select__options {
+    background: rgb(119 46 46 / 40%);
+    border: 2px solid rgba(170, 170, 170, 0.75);
+    border-radius: 5px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.25);
+    top: 43px;
+    position: absolute;
+    right: -1px;
+    padding: 0;
+}
+
+.active .custom-select,
+.custom-select:hover {
+    opacity: 1
+}
+
+.custom-select__arrow {
+    width: 12px;
+    height: 8px;
+    position: absolute;
+    right: 18px;
+    top: 10px;
+    background: url('../images/daw.png') no-repeat;
+    background-size: contain;
+}
+
+.custom-select__options {
+    padding-top: 5px;
+    border-radius: 0 0 5px 5px;
+    position: relative;
+    top: -3px;
+    z-index: 200
+}
+
+.custom-select__option {
+    cursor: pointer
+}
+
+.custom-select__option:hover {
+    background: rgba(125, 125, 125, 0.8);
+}
+
+#globalOverlay {
+    top: 0;
+    left: 0;
+    z-index: 90;
+    position: fixed;
+    width: 100%;
+    height: 100%
+}
+
+.top-line__lang {
+    font-size: 1.125em;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    position: relative;
+    height: 28px
+}
+
+.top-line__lang .flag {
+    background: url(../images/flags.png) no-repeat;
+    cursor: pointer;
+    display: block;
+    width: 24px;
+    height: 16px;
+    position: absolute;
+    left: 7px;
+    top: 8px;
+}
+
+.top-line__lang .flag_ru {
+    background-position: 0 0
+}
+
+.top-line__lang .flag_en {
+    background-position: -24px 0
+}
+
+.top-line__lang .flag_de {
+    background-position: -48px 0
+}
+
+.top-line__lang .flag_br {
+    background-position: -96px 0
+}
+
+.top-line__lang .flag_pl {
+    background-position: -120px 0
+}
+
+.top-line__lang .flag_es {
+    background-position: -144px 0
+}
+
+.top-line__lang .flag_fa {
+    background-position: -168px 1px;
+}
+
+.top-line__question:hover,
+.top-line__question.active {
+    background-position: -597px -46px
+}
+
+.top-line__langs {
+    z-index: 100;
+}
+
+.top-line__langs .custom-select__options {
+    position: absolute;
+    top: 43px;
+    right: 15px;
+}
+
+.top-line__langs {
+    width: 70px
+}
+
+.top-line__langs .custom-select__options {
+    width: 70px
+}
+
+.top-line__langs .text {
+    display: none
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table
+}
+
+.clearfix:after {
+    clear: both
+}
+
+.clearfix {
+    *zoom: 1
+}
+
+@media (max-width: 1199.98px) {
+    .top-line__langs {
+        right: calc(50% - 767px / 2);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .top-line__langs {
+        right: calc(53% - 320px / 2);
+    }
+}
+

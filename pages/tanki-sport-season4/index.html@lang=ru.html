@@ -1,0 +1,502 @@
+
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TankiSport 2021 Сезон IV</title>
+	<meta itemprop="name" content="TankiSport 2021 Сезон IV">
+	<meta property="og:title" content="TankiSport 2021 Сезон IV">
+	<meta itemprop="description" content="TankiSport 2021 Сезон IV">
+	<meta property="og:description" content="TankiSport 2021 Сезон IV">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="icon" type="image/ico" href="favicon.ico">
+
+	<script>
+    var LANG = 'ru'
+	</script>
+
+	<script src="assets/scripts/jquery-3.4.1.min.js"></script>
+	<script src="assets/scripts/site.js@=REVISION"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css@v=REVISION.css">
+	<link rel="stylesheet" type="text/css" href="footer/assets/css/footer.css@v=REVISION.css">
+
+		<noscript>
+		<meta http-equiv="refresh" content="0; URL=noscript.html">
+	</noscript>
+
+	<style type="text/css">
+      .progress_bar::before {
+          height: 100%;
+      }
+
+      body {
+          margin-bottom: 200px;
+      }
+	</style>
+</head>
+<body class="d-flex flex-column">
+
+
+<div class="footer-gradient"></div>
+
+<div class="loaderArea">
+	<div class="loader">
+		<svg class="loading-spinner" style="margin-top: calc(50vh - 40px)" x="0" y="0" width="80" height="80" viewBox="0 0 40 40">
+			<path fill="#87d704" opacity="0.25" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946 s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634 c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"></path>
+			<path fill="#87d704" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0 C22.32,8.481,24.301,9.057,26.013,10.047z" transform="rotate(25.5667 20 20)">
+				<animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="0.7s" repeatCount="indefinite"></animateTransform>
+			</path>
+		</svg>
+	</div>
+</div>
+
+<script>
+  $(window).on('load', function () {
+    $preloader = $('.loaderArea'),
+      $loader = $preloader.find('.loader');
+    $loader.fadeOut();
+    $preloader.delay(500).fadeOut('slow');
+  });
+</script>
+<div class="background-image-tanks"></div>
+
+<header class="py-3 header">
+	<div class="container">
+		<div class="row align-items-center" id="header">
+							<div class="col-md-auto col mb-4 mb-sm-0 order-0">
+					<img src="assets/images/logo.png" alt="logo" class="mw-100">
+				</div>
+
+				<div class="col-md-auto col px-0 px-sm-3 mb-4 mb-sm-0 order-1">
+					<div><div id="langs" class="top-line__langs"><div class="custom-select js-custom-select"><div class="custom-select__arrow sprite sprite_custom-select-arrow"></div><div class="custom-select__active js-active" data-url="?lang=ru"><div class="top-line__lang"><i class="flag flag_ru"></i></div></div></div><div class="custom-select__options js-options" style="display:none"><div class="custom-select__option js-option" data-url="?lang=de"><div class="top-line__lang"><i class="flag flag_de"></i></div></div><div class="custom-select__option js-option" data-url="?lang=pl"><div class="top-line__lang"><i class="flag flag_pl"></i></div></div><div class="custom-select__option js-option" data-url="?lang=en"><div class="top-line__lang"><i class="flag flag_en"></i></div></div></div>
+        <link rel="stylesheet" type="text/css" href="langs/assets/css/flags.css@v=%253C%253F=%2520REVISION%3B%2520%253F%253E.css">
+        <script src="langs/assets/js/main.js@v=%253C%253F=%2520REVISION%3B%2520%253F%253E"></script>
+    </div></div>
+				</div>
+
+				<div class="mx-auto d-flex flex-row flex-wrap text-uppercase font-weight-bold z-ind-1 justify-content-center col-12 col-md-auto mb-4 mb-md-0 mt-3 mt-md-0 order-5 order-md-2">
+					<a href="index.html@lang=ru.html" class="header-link active position-relative">Танкофонд</a>
+					<a href="index.html@page=vote&amp;lang=ru.html" class="header-link ml-4">Голосование</a>
+				</div>
+
+				<div class="col-auto ml-auto ml-sm-0 ml-md-auto order-2 order-md-3 px-0 px-sm-3 d-none" id="user_clan"></div>
+
+				<div class="col-auto d-none flex-column pl-0 order-3 order-md-4" id="container-header"></div>
+
+				<div class="col col-md-auto order-sm-4 order-1 mb-4 mb-sm-0 text-center order-4 order-md-5 ml-auto" id="login_or_logout">
+					<button class="button-open" id='aut' data-modal-trigger="trigger-1" onclick="toggleModal();">Войти</button>
+
+					<div id="modal-aut" data-modal="trigger-1" class="modal_login">
+						<form id="modal-content-wrapper" class="content-wrapper">
+							<button class="close"></button>
+							<div id="header-auth" class="text-uppercase">Авторизуйся в «Танках Онлайн», чтобы поддержать любимую команду</div>
+
+							<div id="login-label">Твой никнейм</div>
+							<input name="login" type="text" id="login-auth">
+
+							<div id="password-label">Пароль</div>
+							<input name="password" type="password" id="password-auth">
+
+							<div class="g-recaptcha" data-sitekey="6LeV5AITAAAAAI3U1V8jsU-bsPuSqjKa4th1Zy7a"></div>
+
+							<div onclick="onClickAuth('form_auth')" class="button_green_auth">Войти</div>
+						</form>
+					</div>
+
+					<div id="modal-aut2" data-modal="trigger-1" class="modal_login">
+						<form id="modal-content-wrapper2" class="content-wrapper">
+							<button class="close"></button>
+							<div id="header-auth" class="text-uppercase">Авторизуйся в «Танках Онлайн», чтобы поддержать любимую команду</div>
+
+							<div id="twoFA-label">Двухфакторная аутентификация</div>
+							<input name="twoFA" type="text" id="twoFA-auth">
+
+							<div class="g-recaptcha" data-sitekey="6LeV5AITAAAAAI3U1V8jsU-bsPuSqjKa4th1Zy7a"></div>
+							<div onclick="onClickAuth('form_auth_twofa')" class="button_green_auth">Войти</div>
+						</form>
+					</div>
+				</div>
+			
+
+		</div>
+	</div>
+</header>
+
+<div class="block_commands py-5 mt-3">
+	<div class="container pb-5">
+		<div class="row">
+
+			<div class="col-4 d-none d-md-block text-right">
+				<div class="level_points-background">
+					<div style="height: 100%" class="level_points"></div>
+				</div>
+				<img src="assets/images/level_block.png" alt="progress" class="mw-100">
+
+			</div>
+
+			<div class="col-md-8 col-12 d-flex flex-column">
+				<h3 class="text-orange text-uppercase font-weight-bold text-center text-md-left">Сейчас в танкофонде:</h3>
+				<span class="prize-fond d-flex py-2 mb-4 align-items-center mx-auto mx-md-0">15 000 000 <span class="ml-3"><img src="assets/images/fond.png" alt="img" class="mw-100 img-fond"></span></span>
+				<div class="row mx-auto mx-md-0">
+					<div class="col-sm-auto col-12 d-flex">
+						<span class="text-members text-white d-flex align-items-center mx-auto mx-sm-0">1 806 <img src="assets/images/hires.png" alt="img" class="mw-100"></span>
+					</div>
+					<div class="col-sm-auto col-12 d-flex flex-column text-center mt-2 text-md-left mt-md-0">
+						<span class="text-orange">Обновлено:</span>
+						<span>Минуту назад</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row font-weight-bold text-uppercase my-3 py-sm-5">
+			<div class="col-12 col-lg-6 d-flex flex-row flex-wrap align-items-center">
+				<div class="col-auto ml-auto">
+					<span class="proc_text">90%</span>
+				</div>
+				<div class="col-7 mr-auto">
+					<span class="fond_text">призового фонда будут разделены между игроками-участниками</span>
+				</div>
+			</div>
+			<div class="col-12 col-lg-6 d-flex flex-row flex-wrap align-items-center mt-4 mt-lg-0">
+				<div class="col-auto ml-auto">
+					<span class="proc_text">10%</span>
+				</div>
+				<div class="col-7 mr-auto">
+					<span class="fond_text">разделится между кланами-финалистами</span>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="container-fluid background-pink pt-5">
+	<div class="container d-flex flex-column">
+		<h2 class="font-weight-bold text-uppercase text-center">Покупай специальные предложения и присоединяйся к призовой гонке</h2>
+
+		<div class="row text-center text-uppercase font-weight-bold">
+			<div class="col-12 col-md-4 d-flex flex-column flex-wrap">
+				<span class="fond_text_gray mb-3 mt-5">«Бронза»</span>
+				<div><img src="assets/images/special_offer_2.png" class="mw-100" alt="special_offer"></div>
+			</div>
+
+			<div class="col-12 col-md-4 d-flex flex-column flex-wrap">
+				<span class="fond_text_gray mb-3 mt-5">«Серебро»</span>
+				<div><img src="assets/images/special_offer_3.png" class="mw-100" alt="special_offer"></div>
+			</div>
+
+			<div class="col-12 col-md-4 d-flex flex-column flex-wrap">
+				<span class="fond_text_gray mb-3 mt-5">«Золото»</span>
+				<div><img src="assets/images/special_offer_1.png" class="mw-100" alt="special_offer"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid background-pink-end z-ind-1">
+	<div class="container d-flex flex-column flex-wrap">
+		<h2 class="font-weight-bold text-uppercase text-center mt-5">Получай призы за каждый новый уровень танкофонда</h2>
+
+		<span class="text-center text-grey mt-1 px-md-5 z-ind-1">При достижении каждого нового уровня фонда все игроки,<br> купившие любое спецпредложение, получат следующие призы:</span>
+
+		<div class="row mt-5 position-relative progress_bar">
+
+			<div class="col-12 d-flex flex-row flex-wrap position-relative prize_block donated">
+
+				<div class="col-5 col-md-3 d-flex flex-column text-center font-weight-bold">
+					<span class="number_prize donated">1</span>
+					<span class="fond_number pb-3">1 000 000	<img src="assets/images/fond_mini.png" alt="fond"></span>
+				</div>
+				<div class="col-7 col-md-9 d-flex flex-column font-weight-bold position-relative prize pl-md-5">
+					<span class="fond_text_gray text-uppercase pt-sm-3">Ядерная энергия +1</span>
+					<span class="prize_1"></span>
+				</div>
+
+			</div>
+
+			<div class="col-12 d-flex flex-row flex-wrap position-relative prize_block donated">
+
+				<div class="col-5 col-md-3 d-flex flex-column text-center font-weight-bold">
+					<span class="number_prize donated">2</span>
+					<span class="fond_number pb-3">2 000 000	<img src="assets/images/fond_mini.png" alt="fond"></span>
+				</div>
+				<div class="col-7 col-md-9 d-flex flex-column font-weight-bold position-relative pl-md-5">
+					<span class="fond_text_gray text-uppercase pt-sm-3">Слот защитного модуля +1</span>
+					<span class="prize_2"></span>
+				</div>
+
+			</div>
+
+
+			<div class="col-12 d-flex flex-row flex-wrap position-relative prize_block donated">
+
+				<div class="col-5 col-md-3 d-flex flex-column text-center font-weight-bold">
+					<span class="number_prize donated">3</span>
+					<span class="fond_number pb-3">3 000 000	<img src="assets/images/fond_mini.png" alt="fond"></span>
+				</div>
+				<div class="col-7 col-md-9 d-flex flex-column font-weight-bold position-relative prize pl-md-5">
+					<span class="fond_text_gray text-uppercase pt-sm-3">Контейнеры +5</span>
+					<span class="prize_3"></span>
+				</div>
+
+			</div>
+
+
+			<div class="col-12 d-flex flex-row flex-wrap position-relative prize_block donated">
+
+				<div class="col-5 col-md-3 d-flex flex-column text-center font-weight-bold">
+					<span class="number_prize donated">4</span>
+					<span class="fond_number pb-3">4 000 000	<img src="assets/images/fond_mini.png" alt="fond"></span>
+				</div>
+				<div class="col-7 col-md-9 d-flex flex-column font-weight-bold position-relative pl-md-5">
+					<span class="fond_text_gray text-uppercase pt-sm-3">Контейнеры +5</span>
+					<span class="prize_3"></span>
+				</div>
+
+			</div>
+
+
+			<div class="col-12 d-flex flex-row flex-wrap position-relative prize_block donated">
+
+				<div class="col-5 col-md-3 d-flex flex-column text-center font-weight-bold">
+					<span class="number_prize donated">5</span>
+					<span class="fond_number pb-3">5 000 000	<img src="assets/images/fond_mini.png" alt="fond"></span>
+				</div>
+				<div class="col-7 col-md-9 d-flex flex-column font-weight-bold position-relative prize pl-md-5">
+					<span class="fond_text_gray text-uppercase pt-sm-3">Контейнеры +5</span>
+					<span class="prize_3"></span>
+				</div>
+
+			</div>
+
+
+			<div class="col-12 d-flex flex-row flex-wrap position-relative prize_block donated">
+
+				<div class="col-5 col-md-3 d-flex flex-column text-center font-weight-bold">
+					<span class="number_prize donated">6</span>
+					<span class="fond_number pb-3">6 000 000	<img src="assets/images/fond_mini.png" alt="fond"></span>
+				</div>
+				<div class="col-7 col-md-9 d-flex flex-column font-weight-bold position-relative pl-md-5">
+					<span class="fond_text_gray text-uppercase pt-sm-3">Слот защитного модуля +1</span>
+					<span class="prize_2"></span>
+				</div>
+
+			</div>
+
+
+			<div class="col-12 d-flex flex-row flex-wrap position-relative prize_block ">
+
+				<div class="col-5 col-md-3 d-flex flex-column text-center font-weight-bold">
+					<span class="number_prize ">7</span>
+					<span class="fond_number pb-3">7 000 000	<img src="assets/images/fond_mini.png" alt="fond"></span>
+				</div>
+				<div class="col-7 col-md-9 d-flex flex-column font-weight-bold position-relative prize pl-md-5">
+					<span class="fond_text_gray text-uppercase pt-sm-3">Ультраконтейнеры +5</span>
+					<span class="prize_4"></span>
+				</div>
+
+			</div>
+
+
+			<div class="col-12 d-flex flex-row flex-wrap position-relative prize_block ">
+
+				<div class="col-5 col-md-3 d-flex flex-column text-center font-weight-bold">
+					<span class="number_prize ">8</span>
+					<span class="fond_number pb-3">8 000 000	<img src="assets/images/fond_mini.png" alt="fond"></span>
+				</div>
+				<div class="col-7 col-md-9 d-flex flex-column font-weight-bold position-relative pl-md-5">
+					<span class="fond_text_gray text-uppercase pt-sm-3">Ультраконтейнеры +5</span>
+					<span class="prize_4"></span>
+				</div>
+
+			</div>
+
+
+			<div class="col-12 d-flex flex-row flex-wrap position-relative prize_block ">
+
+				<div class="col-5 col-md-3 d-flex flex-column text-center font-weight-bold">
+					<span class="number_prize ">9</span>
+					<span class="fond_number pb-3">9 000 000	<img src="assets/images/fond_mini.png" alt="fond"></span>
+				</div>
+				<div class="col-7 col-md-9 d-flex flex-column font-weight-bold position-relative prize pl-md-5">
+					<span class="fond_text_gray text-uppercase pt-sm-3">Ультраконтейнеры +5</span>
+					<span class="prize_4"></span>
+				</div>
+
+			</div>
+
+
+			<div class="col-12 d-flex flex-row flex-wrap position-relative prize_block ">
+
+				<div class="col-5 col-md-3 d-flex flex-column text-center font-weight-bold">
+					<span class="number_prize ">10</span>
+					<span class="fond_number pb-3">10 000 000	<img src="assets/images/fond_mini.png" alt="fond"></span>
+				</div>
+				<div class="col-7 col-md-9 d-flex flex-column font-weight-bold position-relative pl-md-5">
+					<span class="fond_text_gray text-uppercase pt-sm-3">Слот защитного модуля +1</span>
+					<span class="prize_2"></span>
+				</div>
+
+			</div>
+
+
+			<div class="col-12 d-flex flex-row flex-wrap position-relative prize_block ">
+
+				<div class="col-5 col-md-3 d-flex flex-column text-center font-weight-bold">
+					<span class="number_prize ">11</span>
+					<span class="fond_number pb-3">11 000 000	<img src="assets/images/fond_mini.png" alt="fond"></span>
+				</div>
+				<div class="col-7 col-md-9 d-flex flex-column font-weight-bold position-relative prize pl-md-5">
+					<span class="fond_text_gray text-uppercase pt-sm-3">Скин контейнеры +1</span>
+					<span class="prize_5"></span>
+				</div>
+
+			</div>
+
+
+			<div class="col-12 d-flex flex-row flex-wrap position-relative prize_block ">
+
+				<div class="col-5 col-md-3 d-flex flex-column text-center font-weight-bold">
+					<span class="number_prize ">12</span>
+					<span class="fond_number pb-3">12 000 000	<img src="assets/images/fond_mini.png" alt="fond"></span>
+				</div>
+				<div class="col-7 col-md-9 d-flex flex-column font-weight-bold position-relative pl-md-5">
+					<span class="fond_text_gray text-uppercase pt-sm-3">Скин контейнеры +1</span>
+					<span class="prize_5"></span>
+				</div>
+
+			</div>
+
+
+			<div class="col-12 d-flex flex-row flex-wrap position-relative prize_block ">
+
+				<div class="col-5 col-md-3 d-flex flex-column text-center font-weight-bold">
+					<span class="number_prize ">13</span>
+					<span class="fond_number pb-3">13 000 000	<img src="assets/images/fond_mini.png" alt="fond"></span>
+				</div>
+				<div class="col-7 col-md-9 d-flex flex-column font-weight-bold position-relative prize pl-md-5">
+					<span class="fond_text_gray text-uppercase pt-sm-3">Скин контейнеры +1</span>
+					<span class="prize_5"></span>
+				</div>
+
+			</div>
+
+
+			<div class="col-12 d-flex flex-row flex-wrap position-relative prize_block ">
+
+				<div class="col-5 col-md-3 d-flex flex-column text-center font-weight-bold">
+					<span class="number_prize ">14</span>
+					<span class="fond_number pb-3">14 000 000	<img src="assets/images/fond_mini.png" alt="fond"></span>
+				</div>
+				<div class="col-7 col-md-9 d-flex flex-sm-row flex-column p-0 p-sm-3 font-weight-bold position-relative align-items-sm-center pl-md-5">
+					<span class="fond_text_gray_transparent text-uppercase pt-md-3">Защитный модуль <span class="prize_name">«Броненосец»</span></span>
+					<span class="prize_6"></span>
+				</div>
+
+			</div>
+
+
+			<div class="col-12 d-flex flex-row flex-wrap position-relative prize_block ">
+
+				<div class="col-5 col-md-3 d-flex flex-column text-center font-weight-bold">
+					<span class="number_prize ">15</span>
+					<span class="fond_number pb-3">15 000 000	<img src="assets/images/fond_mini.png" alt="fond"></span>
+				</div>
+				<div class="col-7 col-md-9 d-flex flex-sm-row flex-column p-0 p-sm-3 font-weight-bold position-relative align-items-sm-center pl-md-5">
+					<span class="fond_text_gray_transparent text-uppercase pt-md-3">Дрон <span class="prize_name">«Кризис»</span></span>
+					<span class="prize_7"></span>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-md modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title text-center w-100" id="exampleModalLabel">Призы</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body d-flex flex-row flex-wrap text-center">
+				<div class="col-12">
+						Купи краску клана в Магазине, чтобы завершить авторизацию на лендинге и поучаствовать в голосовании				</div>
+				<div class="col-6 mt-3">
+					<img src="assets/images/Clan_1_Preview.png" alt="paint" class="mw-100">
+				</div>
+				<div class="col-6 mt-3">
+					<img src="assets/images/Clan_2_Preview.png" alt="paint" class="mw-100">
+				</div>
+				<div class="col-6">
+					<img src="assets/images/Clan_3_Preview.png" alt="paint" class="mw-100">
+				</div>
+				<div class="col-6">
+					<img src="assets/images/Clan_4_Preview.png" alt="paint" class="mw-100">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="Modal_error" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title text-center w-100" id="exampleModalLabel">Ошибка</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body d-flex flex-column">
+				<span class="text-center">Не удалось проголосовать.</span>			</div>
+		</div>
+	</div>
+</div>
+
+<div id="upbutton"></div>
+
+<footer class="py-3">
+						<div class="container">
+										
+									<div class="row">
+								<div class="col-md-7 col-12 text-center text-md-left d-flex flex-column">
+									<span>© ООО «Альтернатива Гейм» 2010–2021. Все права защищены.</span>
+								</div>
+								<div class="col-auto ml-auto text-center text-md-left mr-md-0 mr-auto mt-2 mt-sm-0">
+		                <div class="footer__button"><a href="https://vk.com/tankionline" target="_blank">
+                        <div class="footer__sprite icon-vk"></div>
+                    </a><a href="https://facebook.com/ru.tankionline/" target="_blank">
+                        <div class="footer__sprite icon-facebook"></div>
+                    </a><a href="https://youtube.com/user/tankionline" target="_blank">
+                        <div class="footer__sprite icon-you"></div>
+                    </a><a href="https://instagram.com/tankionline_ru/" target="_blank">
+                        <div class="footer__sprite icon-inst"></div>
+                    </a><a href="https://odnoklassniki.ru/tankionline" target="_blank">
+                        <div class="footer__sprite icon-odnoklassniki"></div>
+                    </a></div>
+								</div>
+							</div>
+						</div>
+					</footer>
+<link rel="stylesheet" href="modal/modal.css@v=REVISION.css">
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="assets/scripts/bootstrap/bootstrap.js"></script>
+
+<script>
+  $('#myModal').on('shown.bs.modal', function () {
+    $('#myInput').trigger('focus')
+  });
+</script>
+<script src="modal/modal.js"></script>
+<script src="assets/scripts/main.js"></script>
+</body>
+</html>

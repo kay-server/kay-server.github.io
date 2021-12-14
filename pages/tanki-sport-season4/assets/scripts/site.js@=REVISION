@@ -1,0 +1,36 @@
+function redirectToForum(lang) {
+  if (lang === 'pl') {
+    window.open("http://pl.tankiforum.com/index.php?showtopic=10142");
+    return;
+  }
+  if (lang === 'de') {
+    window.open("http://de.tankiforum.com/index.php?showtopic=203948");
+    return;
+  }
+  if (lang === 'ru') {
+    window.open("https://ru.tankiforum.com/topic/237506/");
+    return;
+  }
+  if (lang === 'br') {
+    window.open("http://br.tankiforum.com/index.php?showtopic=29256");
+    return;
+  }
+  if (lang === 'es') {
+    window.open("http://es.tankiforum.com/index.php?showtopic=2228");
+    return;
+  }
+
+  window.open("http://en.tankiforum.com/index.php?showtopic=381728");
+}
+
+function buyLink() {
+  location.href = LINK_BUY;
+}
+
+var LINK_BUY = "https://tankionline.com/battle-" + LANG + ".html?utm_source=spacewar&utm_campaign=play";
+var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
+
+if (isAndroid) {
+  LINK_BUY = "https://redirect.appmetrica.yandex.com/serve/674334194213595588?utm_source=spacewar&utm_campaign=play";
+}
+
