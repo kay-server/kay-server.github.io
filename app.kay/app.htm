@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="framework/app.default.style.css">
 		<noscript>
-			<meta http-equiv="refresh" content="0;URL='err#main'">
+			<meta http-equiv="refresh" content="0;URL='err?code=NO_SCRIPT'">
 		</noscript>
 		<script type="text/javascript">
 			var appEnvironment = false;
@@ -15,12 +15,12 @@
 			}
 			if (!appEnvironment) {
 				alert('Runtime error.');
-				location="err";
+				location="err?code=EMPTY_ENVIRONMENT";
 			}
 			
 			const params = new URLSearchParams(document.location.search);
 			const init = params.get('init');
-			if (init != '_loader') {location='err';}
+			if (init != '_loader') {location='err?code=RUNTIME_ARGUMENT';}
 		</script>
 	</head>
 	<body> <!-- APPLICATION BODY -->
