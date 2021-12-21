@@ -1,23 +1,30 @@
 <!-- project-name: App1 -->
-<head>
-	<script type="text/javascript">
-		var isFramed = false;
-		try {
-			isFramed = window != window.top || document != top.document || self.location != top.location;
-		} catch (e) {
-			isFramed = true;
-		}
-		if (!isFramed) {
-			alert('Runtime error.');
-			location="err";
-		}
-	</script>
-	<noscript>
-		<meta http-equiv="refresh" content="0;URL='err'">
-	</noscript>
-	<link rel="stylesheet" href="framework/app.default.style.css">
-</head>
-<body>
-	<h1>App1</h1>
-	<p style="font-size: 20px;">Hello, world!</p>
-</body>
+<html>
+	<head> <!-- APPLICATION HEAD -->
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="framework/app.default.style.css">
+		<noscript>
+			<meta http-equiv="refresh" content="0;URL='err#main'">
+		</noscript>
+		<script type="text/javascript">
+			var appEnvironment = false;
+			try {
+				appEnvironment = window != window.top || document != top.document || self.location != top.location;
+			} catch (e) {
+				appEnvironment = true;
+			}
+			if (!appEnvironment) {
+				alert('Runtime error.');
+				location="err";
+			}
+			
+			const params = new URLSearchParams(document.location.search);
+			const init = params.get('init');
+			if (init != '_loader') {location='err';}
+		</script>
+	</head>
+	<body> <!-- APPLICATION BODY -->
+		<h1>App1</h1>
+		<p style="font-size: 20px;">Hello, world!</p>
+	</body>
+</html>
