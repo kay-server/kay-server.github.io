@@ -6,7 +6,10 @@
 		<noscript>
 			<meta http-equiv="refresh" content="0;URL='err?code=NO_SCRIPT'">
 		</noscript>
+		<script src="framework/jquery.js"></script>
 		<script type="text/javascript">
+			const params = new URLSearchParams(document.location.search);
+			const init = params.get('init');
 			var appEnvironment = false;
 			try {
 				appEnvironment = window != window.top || document != top.document || self.location != top.location;
@@ -17,14 +20,35 @@
 				alert('Runtime error.');
 				location="err?code=EMPTY_ENVIRONMENT";
 			}
+			if (init != '_loader') {location="err?code=RUNTIME_ARGUMENT";} // for next updates
 			
-			const params = new URLSearchParams(document.location.search);
-			const init = params.get('init');
-			if (init != '_loader') {location='err?code=RUNTIME_ARGUMENT';}
+			
+			
+			
+			
+			
+			
 		</script>
 	</head>
 	<body> <!-- APPLICATION BODY -->
-		<h1>App1</h1>
-		<p style="font-size: 20px;">Hello, world!</p>
+
+
+<script>
+
+let uri = 'visual.app.code';
+ 
+fetch(uri)
+    .then(response => response.text())
+    .then(code => console.log(code));
+
+let source = '[h1]App1 App1[/h1][p style="font-size: 20px;"]Hello, world![/p]'
+	.replaceAll("[", "<").replaceAll("]", ">");
+
+document.write(source);
+
+</script>
+
+
+
 	</body>
 </html>
