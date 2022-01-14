@@ -1,1 +1,4 @@
-<h1>SeCCUSS!</h1>
+<link rel="stylesheet" href="framework/app.default.style.css"> <!-- STYLES -->
+
+<h1>App1</h1>
+<p style="font-size: 20px;">Hello, world!</p>

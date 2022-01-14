@@ -21,34 +21,14 @@
 				location="err?code=EMPTY_ENVIRONMENT";
 			}
 			if (init != '_loader') {location="err?code=RUNTIME_ARGUMENT";} // for next updates
-			
-			
-			
-			
-			
-			
-			
 		</script>
 	</head>
 	<body> <!-- APPLICATION BODY -->
-
-
-<script>
-
-let uri = 'visual.app.code';
- 
-fetch(uri)
-    .then(response => response.text())
-    .then(code => console.log(code));
-
-let source = '[h1]App1 App1[/h1][p style="font-size: 20px;"]Hello, world![/p]'
-	.replaceAll("[", "<").replaceAll("]", ">");
-
-document.write(source);
-
-</script>
-
-
-
+		<script>
+			let core = 'Visual.App.Code';
+			fetch(core)
+				.then(response => response.text())
+				.then(code => document.write(code));
+		</script>
 	</body>
 </html>
