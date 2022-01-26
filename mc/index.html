@@ -105,13 +105,12 @@
 <h4 id="srvversion" style="text-align: center;"><noscript>[Ошибка]</noscript></h4>
 <h4 id="srvonline" style="text-align: center;"><noscript>[Ошибка]</noscript></h4>
 
-
-
 <!-- GET SERVER ONLINE, VERSION -->
 <script>
 try {
 async function getServerStatus() {
-const response = await fetch('https://api.mcsrvstat.us/bedrock/2/bedrock.kay-software.ru:19191');
+const host = "bedrock.kay-software.ru:19191";
+const response = await fetch('https://api.mcsrvstat.us/bedrock/2/' + host);
 const json = await response.json();
 const online = json.players.online;
 const version = json.version;
@@ -127,13 +126,6 @@ serverOnline.innerHTML = '<span style="color: white;">Текущий онлай�
 
 }
 </script>
-
-
-
-
-
-
-
 
 <div class="mbr-section-btn mt-3"><a class="btn btn-secondary display-4" href="#account">
 <span class="mobi-mbri mobi-mbri-star mbr-iconfont mbr-iconfont-btn" style="font-size: 18px;">
