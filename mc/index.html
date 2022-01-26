@@ -102,29 +102,32 @@
 <p class="mbr-text mbr-fonts-style display-7"><strong> Приватный игровой сервер для Minecraft Bedrock</strong></p> 
 
 
-<h4 id="srvversion" style="text-align: center;"><noscript>[Ошибка]</noscript></h4>
-<h4 id="srvonline" style="text-align: center;"><noscript>[Ошибка]</noscript></h4>
+<h4 id="srvversion" style="text-align: center;"><noscript>{Enable JavaScript}</noscript></h4>
+<h4 id="srvonline" style="text-align: center;"><noscript>[ Site scripts error ]</noscript></h4>
 
 <!-- GET SERVER ONLINE, VERSION -->
 <script>
-try {
+
 async function getServerStatus() {
-const host = "bedrock.kay-software.ru:19191";
-const response = await fetch('https://api.mcsrvstat.us/bedrock/2/' + host);
-const json = await response.json();
-const online = json.players.online;
-const version = json.version;
-
-let serverVersion = document.getElementById('srvversion');
-serverVersion.innerHTML = '<span style="color: white;">Версия: </span><span style="color: #9c9c9c;">' + version + '</span>';
-
-
-let serverOnline = document.getElementById('srvonline');
-serverOnline.innerHTML = '<span style="color: white;">Текущий онлайн: </span><span style="color: lime;">' + online + "</span>";
+	try {
+		const host = "bedrock.kay-software.ru:19191";
+		const response = await fetch('https://api.mcsrvstat.us/bedrock/2/' + host);
+		const json = await response.json();
+		const online = json.players.online;
+		const version = json.version;
+	
+		let serverVersion = document.getElementById('srvversion');
+		serverVersion.innerHTML = '<span style="color: white;">Версия: </span><span style="color: #9c9c9c;">' + version + '</span>';
+	
+	
+		let serverOnline = document.getElementById('srvonline');
+		serverOnline.innerHTML = '<span style="color: white;">Текущий онлайн: </span><span style="color: lime;">' + online + '</span>';
+	} catch (e) {
+		let serverErrMsg = document.getElementById('srvonline');
+		serverErrMsg.innerHTML = '<span style="color: pink;">Сервер оффлайн :(</span>';
+	}
 } getServerStatus();
-} catch (e) {
 
-}
 </script>
 
 <div class="mbr-section-btn mt-3"><a class="btn btn-secondary display-4" href="#account">
