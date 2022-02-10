@@ -1,0 +1,12 @@
+> connect "container" "www"
+$user> as-local auth "root"
+$root> config reload "rules.txt"
+$root> config domain file "CNAME"
+$root> config admin file "admin\loginform.xaz-o1"
+$root> config initialize -ip1 -ip2 -ip3 -ip4
+$root> cmp get * config _*
+$root> cmp load config _*
+$root> as-local setport kay-software-network list 39 40 41 42
+$root> block kay-software-network private list 851 869
+$root> block kay-software-network public list 1932 4421 9245
+$root> config add server "https://cloud.server.kay-software.ru/boot.txt"
