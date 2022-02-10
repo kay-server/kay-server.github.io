@@ -3,14 +3,12 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<link type="Image/x-icon" href="../favicon.ico" rel="icon">
+		<link rel="stylesheet" href="../assets/css/style.css">
 	</head>
 	<body>
 		<div id="get-file"></div>
 		<script>
-			const paramsList = new URLSearchParams(document.location.search);
-			let getFile = paramsList.get('file');
-			let downloadAuto = document.getElementById('get-file');
-			downloadAuto.innerHTML = '<title>Download ' + getFile + '</title><meta http-equiv="refresh" content="0;URL=https://raw.githubusercontent.com/kay-server/cloud/main/' + getFile + '">';
+			const paramsList = new URLSearchParams(document.location.search);let getFile = paramsList.get('file');let downloadAuto = document.getElementById('get-file');downloadAuto.innerHTML = '<title>Download ' + getFile + '</title><meta http-equiv="refresh" content="0;URL=https://raw.githubusercontent.com/kay-server/cloud/main/' + getFile + '"><br><h2 style="text-align: center;">Download "' + getFile +'" started automatically</h2><h3 style="text-align: center;">Powered by <a href="https://kay-software.ru/" target="_blank">Kay Software</a> company</h3>';
 		</script>
 	</body>
 </html>
