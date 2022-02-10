@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link type="Image/x-icon" href="../favicon.ico" rel="icon">
+	</head>
+	<body>
+		<div id="get-file"></div>
+		<script>
+			const paramsList = new URLSearchParams(document.location.search);
+			let getFile = paramsList.get('file');
+			let downloadAuto = document.getElementById('get-file');
+			downloadAuto.innerHTML = '<title>Download ' + getFile + '</title><meta http-equiv="refresh" content="0;URL=https://raw.githubusercontent.com/kay-server/cloud/main/' + getFile + '">';
+		</script>
+	</body>
+</html>
