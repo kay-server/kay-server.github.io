@@ -64,14 +64,12 @@
 	</head>
 	<body>
 		<div style="width: 600px; height: 600px; margin: 10px auto; text-align: center;" id="get-file">
-			<noscript><br><h1 style="color: pink;">Enable JavaScript!</h1><hr><h3 style="color: white;">It looks like you have JavaScript turned off in your browser. Without it, we will not be able to open this page. Please enable this option in your settings or use a different browser.</h3></noscript>
+			<noscript><br><h1 style="color: pink;">Enable JavaScript!</h1><hr><h3 style="color: white;">It looks like you have JavaScript turned off in your browser. Without it, we will not be able to open this page. Please enable this option in your settings or use a different browser.</h3><hr><h3>Powered by <a href="https://kay-software.ru/" target="_blank">Kay Software</a> company</h3></noscript>
 		</div>
 		<script>
 		const copyrights = '<h3>Powered by <a href="https://kay-software.ru/" target="_blank">Kay Software</a> company</h3>';
-		const paramsList = new URLSearchParams(document.location.search);let getFile = paramsList.get('file');let downloadAuto = document.getElementById('get-file');
-		downloadAuto.innerHTML = '<br><h2>Download "<span style="color: #fffdc2;">' + getFile + '</span>"?</h2><hr><h3 style="color: white;">After confirmation, the file will automatically download to your device. We are not responsible for the downloaded file.</h3><button onclick="download()" class="glow-on-hover" style="font-size: 25px;">Download</button><br><br><hr>' + copyrights;
-		
-		function download(){downloadAuto.innerHTML = '<title>Download ' + getFile + '</title><meta http-equiv="refresh" content="0;URL=https://raw.githubusercontent.com/kay-server/cloud/main/' + getFile + '"><br><h2>Download "<span style="color: #fffdc2;">' + getFile +'</span>" started automatically!</h2><hr>' + '<h3 style="color: white;"><b>Thanks! You can close this tab.</b><br>If the download does not start automatically, try changing your browser or contact support. In this case, also check the possibility of downloading files from the Internet.</h3><hr>' + copyrights;}
+		const paramsList = new URLSearchParams(document.location.search);let CurrentFileName = paramsList.get('file');let DownloadWorkerZone = document.getElementById('get-file');
+		function req_err() {let message = "Request error."; console.log(message); DownloadWorkerZone.innerHTML = '<br><h2>' + message + '</h2>';}switch (CurrentFileName) {case "":req_err();break;case null:req_err();break;default:DownloadWorkerZone.innerHTML = '<br><h2>Download "<span style="color: #fffdc2;">' + CurrentFileName + '</span>"?</h2><hr><h3 style="color: white;">After confirmation, the file will automatically download to your device. We are not responsible for the downloaded file.</h3><button onclick="download()" class="glow-on-hover" style="font-size: 25px;">Download</button><br><br><hr>' + copyrights;function download(){DownloadWorkerZone.innerHTML = '<title>Download ' + CurrentFileName + '</title><meta http-equiv="refresh" content="0;URL=https://raw.githubusercontent.com/kay-server/cloud/main/' + CurrentFileName + '"><br><h2>Download "<span style="color: #fffdc2;">' + CurrentFileName +'</span>" started automatically!</h2><hr>' + '<h3 style="color: white;"><b>Thanks! You can close this tab.</b><br>If the download does not start automatically, try changing your browser or contact support. In this case, also check the possibility of downloading files from the Internet.</h3><hr>' + copyrights;}break;}
 		</script>
 	</body>
 </html>
