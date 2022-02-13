@@ -19,7 +19,8 @@
 		<meta charset="UTF-8"/>
 		<link type="Image/x-icon" href="../favicon.ico" rel="icon">
 		<link rel="stylesheet" href="../assets/css/style.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=no">
 		<noscript><title>Kay Download Panel</title></noscript>
 		<meta name="keywords" content="файл, скачать, бесплатно, download, file, free, github, kay-software-cloud, kay download panel, kay software">
 		<meta name="description" content="Kay Download Panel">
@@ -28,11 +29,11 @@
 		</style>
 	</head>
 	<body>
-		<div style="width: 600px; height: 600px; margin: 10px auto; text-align: center;" id="get-file">
-			<noscript>
-				<br><h1 style="color: pink;">Enable JavaScript!</h1><hr><h3 style="color: white;">It looks like you have JavaScript turned off in your browser. Without it, we will not be able to open this page. Please enable this option in your settings or use a different browser.</h3><hr><h3>Powered by <a href="https://kay-software.ru/" target="_blank">Kay Software</a> company</h3><a href="../download-panel" target="_blank" style="font-size: 14px; color: gray; text-decoration: underline;">USE THIS FILE EXCHANGER WITHOUT LIMITS FOR FREE</a>
-			</noscript>
-		</div>
+			<div style="width: 600px; height: 600px; margin: 10px auto; text-align: center;" id="get-file" class="wrapper">
+				<noscript>
+					<br><h1 style="color: pink;">Enable JavaScript!</h1><hr><h3 style="color: white;">It looks like you have JavaScript turned off in your browser. Without it, we will not be able to open this page. Please enable this option in your settings or use a different browser.</h3><hr><h3>Powered by <a href="https://kay-software.ru/" target="_blank">Kay Software</a> company</h3><a href="../download-panel" target="_blank" style="font-size: 14px; color: gray; text-decoration: underline;">USE THIS FILE EXCHANGER WITHOUT LIMITS FOR FREE</a>
+				</noscript>
+			</div>
 		<script>
 			const copyrights = '<h3>Powered by <a href="https://kay-software.ru/" target="_blank">Kay Software</a> company</h3><a href="../download-panel" target="_blank" style="font-size: 14px; color: gray; text-decoration: underline;">USE THIS FILE EXCHANGER WITHOUT LIMITS FOR FREE</a>';const paramsList = new URLSearchParams(document.location.search);const cloud = "https://raw.githubusercontent.com/";const defaultDownloadSource = "kay-server";const verification_code_source = '<span style="color: yellow; font-size: 13px; cursor: pointer;" title="Verified">&#9989;</span><br><span style="color: gray;">The file is checked for viruses.</span>';let currentFileName = paramsList.get('file');let downloadSource = paramsList.get('from');switch (downloadSource) {case "":downloadSource = defaultDownloadSource;break;case null:downloadSource = defaultDownloadSource;break;}let verification = false;let verification_code = '';switch (downloadSource) {
 				case defaultDownloadSource:ver();break;
