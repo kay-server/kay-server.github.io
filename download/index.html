@@ -25,7 +25,7 @@
 		<meta name="keywords" content="файл, скачать, бесплатно, download, file, free, github, kay-software-cloud, kay download panel, kay software">
 		<meta name="description" content="Kay Download Panel">
 		<style>
-			.download-button{width:220px;height:50px;border:none;outline:0;color:#fff;background:#111;cursor:pointer;position:relative;z-index:0;border-radius:25px}.download-button:before{content:'';background:linear-gradient(45deg,red,#ff7300,#fffb00,#48ff00,#00ffd5,#002bff,#7a00ff,#ff00c8,red);position:absolute;top:-2px;left:-2px;background-size:400%;z-index:-1;filter:blur(5px);width:calc(100% + 4px);height:calc(100% + 4px);animation:glowing 15s linear infinite;opacity:0;transition:opacity .3s ease-in-out;border-radius:25px}.download-button:active{color:#000}.download-button:active:after{background:0 0}.download-button:hover:before{opacity:1}.download-button:after{z-index:-1;content:'';position:absolute;width:100%;height:100%;background:#111;left:0;top:0;border-radius:25px}@keyframes glowing{0%{background-position:0 0}50%{background-position:400% 0}100%{background-position:0 0}}
+			.kay-download-panel-menu-button{width:220px;height:50px;border:none;outline:0;color:#fff;background:#111;cursor:pointer;position:relative;z-index:0;border-radius:25px}.kay-download-panel-menu-button:before{content:'';background:linear-gradient(45deg,red,#ff7300,#fffb00,#48ff00,#00ffd5,#002bff,#7a00ff,#ff00c8,red);position:absolute;top:-2px;left:-2px;background-size:400%;z-index:-1;filter:blur(5px);width:calc(100% + 4px);height:calc(100% + 4px);animation:glowing 15s linear infinite;opacity:0;transition:opacity .3s ease-in-out;border-radius:25px}.kay-download-panel-menu-button:active{color:#000}.kay-download-panel-menu-button:active:after{background:0 0}.kay-download-panel-menu-button:hover:before{opacity:1}.kay-download-panel-menu-button:after{z-index:-1;content:'';position:absolute;width:100%;height:100%;background:#111;left:0;top:0;border-radius:25px}@keyframes glowing{0%{background-position:0 0}50%{background-position:400% 0}100%{background-position:0 0}}
 		</style>
 	</head>
 	<body>
@@ -50,24 +50,32 @@
 			let DownloadWorkerZone = document.getElementById('get-file');
 			function req_err() {
 				console.log("Request is empty.");
-				DownloadWorkerZone.innerHTML = '<br><h2>Kay Download Panel</h2><hr><h3 style="color: white;">Use file hosting without restrictions for free. Read how it works and how you can upload your files here.<br><br><button onclick="opensite()" class="download-button" style="font-size: 25px;">Read now</button><br><br></h3><hr>' + copyrights;
+				DownloadWorkerZone.innerHTML = '<br><h2>Kay Download Panel</h2><hr><h3 style="color: white;">Use file hosting without restrictions for free. Read how it works and how you can upload your files here.<br><br><button onclick="opensite()" class="kay-download-panel-menu-button" style="font-size: 25px;">Read now</button><br><br></h3><hr>' + copyrights;
 			}
 			switch (currentFileName) {
 				case "":req_err();break;case null:req_err();break;default:
-			DownloadWorkerZone.innerHTML = '<br><h2>Download "<span style="color: #fffdc2;">' + currentFileName + '</span>"?</h2><hr><h3 style="color: white;">After confirmation, the file will automatically download to your device. We are not responsible for the downloaded file.</h3><br><button onclick="download()" class="download-button" style="font-size: 25px;">Download</button><br><p style="font-size: 16px; margin: 10px;">File uploaded by: <a target="_blank" href="https://github.com/' + account + '" style="color: lime;">' + account + '</a>&nbsp;&nbsp;' + verification_code + '</p><br><hr>' + copyrights;
-			function download() {
-            DownloadWorkerZone.innerHTML = '<meta http-equiv="refresh" content="0;URL=' + cloud + account + '/kay-software-cloud/main/' + currentFileName + '"><br><h2>Download "<span style="color: #fffdc2;">' + currentFileName + '</span>" started automatically!</h2><hr>' + '<h3 style="color: white;"><b>Thanks! You can close this tab.</b><br>If the download does not start automatically, try changing your browser or contact support. In this case, also check the possibility of downloading files from the Internet.</h3><hr>' + copyrights;
-        }
-        break;
-}
-
-function ver() {
-    verification_code = verification_code_source;
-}
-
-function opensite() {
-    location = "../download-panel"
-}
+				try {
+					DownloadWorkerZone.innerHTML = '<br><h2>Download "<span style="color: #fffdc2;">' + currentFileName + '</span>"?</h2><hr><h3 style="color: white;">After confirmation, the file will automatically download to your device. We are not responsible for the downloaded file.</h3><br><button onclick="download()" class="kay-download-panel-menu-button" style="font-size: 25px;">Download</button><br><p style="font-size: 16px; margin: 10px;">File uploaded by: <a target="_blank" href="https://github.com/' + account + '" style="color: lime;">' + account + '</a>&nbsp;&nbsp;' + verification_code + '</p><br><hr>' + copyrights;
+						function download() {
+							console.log("Getting file " + currentFileName + "...");
+							try {
+								DownloadWorkerZone.innerHTML = '<meta http-equiv="refresh" content="0;URL=' + cloud + account + '/kay-software-cloud/main/' + currentFileName + '"><br><h2>Download "<span style="color: #fffdc2;">' + currentFileName + '</span>" started automatically!</h2><hr>' + '<h3 style="color: white;"><b>Thanks! You can close this tab.</b><br>If the download does not start automatically, try changing your browser or contact support. In this case, also check the possibility of downloading files from the Internet.</h3><hr>' + copyrights;
+								console.log("Seccuss!");
+							} catch (e) {
+								console.log("Error: " + e + " [Download]");
+							}
+						}
+					} catch (e) {
+						console.log("Error: " + e + " [Main]")
+					}
+				break;
+			}
+			function ver() {
+				verification_code = verification_code_source;
+			}
+			function opensite() {
+				location = "../download-panel"
+			}
 		</script>
 	</body>
 </html>
