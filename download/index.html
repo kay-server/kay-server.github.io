@@ -36,13 +36,13 @@
 			</div>
 
 		<script>
-			const copyrights = '<h3>Powered by <a href="https://kay-software.ru/" target="_blank">Kay Software</a> company</h3><a href="../download-panel" target="_blank" style="font-size: 14px; color: gray; text-decoration: underline;">USE THIS FILE EXCHANGER WITHOUT LIMITS FOR FREE</a>';const paramsList = new URLSearchParams(document.location.search);const cloud = "https://raw.githubusercontent.com/";const defaultDownloadSource = "kay-server";const verification_code_source = '<img src="verified.png" width="16" height="16" style="cursor: pointer; margin: -2.5px;" title="Verified"><br><span style="color: gray;">The file is checked for viruses.</span>';
+			const copyrights = '<h3>Powered by <a href="https://kay-software.ru/" target="_blank">Kay Software</a> company</h3><a href="../download-panel" target="_blank" style="font-size: 14px; color: gray; text-decoration: underline;">USE THIS FILE EXCHANGER WITHOUT LIMITS FOR FREE</a>';const paramsList = new URLSearchParams(document.location.search);const cloud = "https://raw.githubusercontent.com/";const defaultAccount = "kay-server";const verification_code_source = '<img src="verified.png" width="16" height="16" style="cursor: pointer; margin: -2.5px;" title="Verified"><br><span style="color: gray;">The file is checked for viruses.</span>';
 			let currentFileName = paramsList.get('file');
-			let downloadSource = paramsList.get('from');
-			switch (downloadSource) {case "":downloadSource = defaultDownloadSource;break;case null:downloadSource = defaultDownloadSource;break;}
+			let account = paramsList.get('from');
+			switch (account) {case "":account = defaultAccount;break;case null:account = defaultAccount;break;}
 			let verification_code = '';
-			switch (downloadSource) {
-				case defaultDownloadSource:ver();break;
+			switch (account) {
+				case defaultAccount:ver();break;
 				case "Vindikeitor":ver();break;
 				case "lrmpsm53":ver();break;
 				case "MichurinDev":ver();break;
@@ -54,9 +54,9 @@
 			}
 			switch (currentFileName) {
 				case "":req_err();break;case null:req_err();break;default:
-			DownloadWorkerZone.innerHTML = '<br><h2>Download "<span style="color: #fffdc2;">' + currentFileName + '</span>"?</h2><hr><h3 style="color: white;">After confirmation, the file will automatically download to your device. We are not responsible for the downloaded file.</h3><br><button onclick="download()" class="download-button" style="font-size: 25px;">Download</button><br><p style="font-size: 16px; margin: 10px;">File uploaded by: <a target="_blank" href="https://github.com/' + downloadSource + '" style="color: lime;">' + downloadSource + '</a>&nbsp;&nbsp;' + verification_code + '</p><br><hr>' + copyrights;
+			DownloadWorkerZone.innerHTML = '<br><h2>Download "<span style="color: #fffdc2;">' + currentFileName + '</span>"?</h2><hr><h3 style="color: white;">After confirmation, the file will automatically download to your device. We are not responsible for the downloaded file.</h3><br><button onclick="download()" class="download-button" style="font-size: 25px;">Download</button><br><p style="font-size: 16px; margin: 10px;">File uploaded by: <a target="_blank" href="https://github.com/' + account + '" style="color: lime;">' + account + '</a>&nbsp;&nbsp;' + verification_code + '</p><br><hr>' + copyrights;
 			function download() {
-            DownloadWorkerZone.innerHTML = '<meta http-equiv="refresh" content="0;URL=' + cloud + downloadSource + '/kay-software-cloud/main/' + currentFileName + '"><br><h2>Download "<span style="color: #fffdc2;">' + currentFileName + '</span>" started automatically!</h2><hr>' + '<h3 style="color: white;"><b>Thanks! You can close this tab.</b><br>If the download does not start automatically, try changing your browser or contact support. In this case, also check the possibility of downloading files from the Internet.</h3><hr>' + copyrights;
+            DownloadWorkerZone.innerHTML = '<meta http-equiv="refresh" content="0;URL=' + cloud + account + '/kay-software-cloud/main/' + currentFileName + '"><br><h2>Download "<span style="color: #fffdc2;">' + currentFileName + '</span>" started automatically!</h2><hr>' + '<h3 style="color: white;"><b>Thanks! You can close this tab.</b><br>If the download does not start automatically, try changing your browser or contact support. In this case, also check the possibility of downloading files from the Internet.</h3><hr>' + copyrights;
         }
         break;
 }
