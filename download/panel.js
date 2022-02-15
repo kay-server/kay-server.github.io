@@ -40,5 +40,8 @@ function ver(type) {
 	} else if (type == 0) {verification_code = dev_code_source;}
 }
 function opensite() {
-	location = "../download-panel"
+	location = "../download-panel";
+}
+function newTab(url) {
+	window.open(url, '_blank').focus();
 }
