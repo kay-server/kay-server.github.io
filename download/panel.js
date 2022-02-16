@@ -1,9 +1,9 @@
 const panel = "https://kay-software.ru/download/"
 const copyrights = '<h3>Powered by <a href="https://kay-software.ru/" target="_blank">Kay Software</a> company</h3><a href="../download-panel" target="_blank" style="font-size: 14px; color: gray;"><br><img src="banner.png" height="120" width="270"></a>';
+const verification_code_source = '<img src="verified.png" width="16" height="16" style="cursor: pointer; margin: -2.5px;" title="Verified"><br><span style="color: gray;">The file is checked for viruses.</span>';const dev_code_source = '<img src="verified.png" width="16" height="16" style="cursor: pointer; margin: -2.5px;" title="Verified (service account)"><br><span style="color: gray; font-size: 14px;">The files were uploaded by a service account and<br>do not contain malicious code.</span>';
 const paramsList = new URLSearchParams(document.location.search);
 const cloud = "https://raw.githubusercontent.com/";
 const defaultAccount = "kay-server";
-const verification_code_source = '<img src="verified.png" width="16" height="16" style="cursor: pointer; margin: -2.5px;" title="Verified"><br><span style="color: gray;">The file is checked for viruses.</span>';const dev_code_source = '<img src="verified.png" width="16" height="16" style="cursor: pointer; margin: -2.5px;" title="Verified (service account)"><br><span style="color: gray; font-size: 14px;">The files were uploaded by a service account and<br>do not contain malicious code.</span>';
 let currentFileName = paramsList.get('file');
 let account = paramsList.get('from');
 switch (account) {case "":account = defaultAccount;break;case null:account = defaultAccount;break;}
@@ -60,14 +60,14 @@ function generator() {
 		DownloadWorkerZone.innerHTML = `
 		<br><h2>Kay Download Panel</h2><h3>Links generator</h3><hr>
 		<form id="kay-gen">
-			<p style="margin: -2px;">Account name:</p><input placeholder="GitHub nickname" name="github_file" id="account" size="30" style="font-size: 17px; background-color: black; color: white; border-radius: 10px 10px 10px 10px; outline: none;" type="git_account" autocomplete="on"><br><br>
-			<p style="margin: -2px;">File name:</p><input placeholder="File in '\\kay-software-cloud\\' repository" name="github_nick" id="file" size="30" style="font-size: 17px; background-color: black; color: white; border-radius: 10px 10px 10px 10px; outline: none;" type="git_file" autocomplete="on">
+			<p style="margin: -2px;">Account name:</p><input placeholder="GitHub nickname" name="github_file" id="account" size="30" class="generator-input" outline: none;" type="git_account" autocomplete="on"><br><br>
+			<p style="margin: -2px;">File name:</p><input placeholder="File in '\\kay-software-cloud\\' repository" name="github_nick" id="file" size="30" class="generator-input"; outline: none;" type="git_file" autocomplete="on">
 		</form>
 		<br><br>
 		<button class="kay-download-panel-menu-button" style="font-size: 22px; color: pink; width: 85px;" onclick="req_err()">Back</button>
 		<button type="submit" form="kay-gen" class="kay-download-panel-menu-button" style="font-size: 20px;" onclick="generate()">Create URL</button></form>
 		<br><br><br><h3 style="margin: -4px;">------------------------ RESULT ------------------------</h3>
-		<p><input value="Waiting for result..." id="result-output" id="file" size="22" style="font-size: 20px; background-color: black; color: #ffeabf;" readonly><button onclick="copyResult()" style="background-color: black; color: white; outline: none; font-size: 22px;">COPY</button></p><h3 style="margin: -27px;">-------------------------------------------------------------</h3><br><br><hr>
+		<p><input value="Waiting for result..." id="result-output" id="file" size="22" style="font-size: 20px; background-color: black; color: #ffeabf; text-align: center; cursor: default;" readonly><button onclick="copyResult()" style="background-color: black; color: white; outline: none; font-size: 22px; cursor: default;">COPY</button></p><h3 style="margin: -27px;">-------------------------------------------------------------</h3><br><br><hr>
 		` + copyrights;
 	} catch (e) {
 		console.log("Error: " + e + " [Generator]");
@@ -118,18 +118,18 @@ function copyText(str) {
 	document.body.removeChild(el);
 }
 
-
-// Fast Dialog link generator
-if (paramsList.get('fast-gen') !== null) {
-	DownloadWorkerZone.innerHTML = '<h2>\'fast-gen\' module is active</h2>';
-	let gen_account = window.prompt("GitHub nickname:", "");
-	let gen_filename = window.prompt("File name in '\\kay-softtware-cloud\\' repository:");
-	switch (true) {
-		case (gen_filename == null)||(gen_filename.trim() == ""):alert("Input error.");break;
-		default:
-			if (gen_account == "") {gen_account = defaultAccount;}
-			let result = panel + '?file=' + encodeURI(gen_filename) + "&from=" + encodeURI(gen_account);
-			window.prompt("Result:", result);
-			if (confirm("Open generated URL?\n\n" + result)) {location = result;}	
+function FastDialogGenerator(cmd) {
+	if (paramsList.get(cmd) !== null) {
+		DownloadWorkerZone.innerHTML = '<h2>\'' + cmd + '\' module is active...</h2>';
+		let gen_account = window.prompt("GitHub nickname:", "");
+		let gen_filename = window.prompt("File name in '\\kay-softtware-cloud\\' repository:");
+		switch (true) {
+			case (gen_filename == null)||(gen_filename.trim() == ""):alert("Input error.");break;
+			default:
+				if (gen_account == "") {gen_account = defaultAccount;}
+				let result = panel + '?file=' + encodeURI(gen_filename) + "&from=" + encodeURI(gen_account);
+				window.prompt("Result:", result);
+				location = result;
+		}
 	}
-}
+} FastDialogGenerator("fast-gen");
