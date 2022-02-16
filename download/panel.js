@@ -121,6 +121,7 @@ function copyText(str) {
 
 // Fast Dialog link generator
 if (paramsList.get('fast-gen') !== null) {
+	DownloadWorkerZone.innerHTML = '<h2>\'fast-gen\' module is active</h2>';
 	let gen_account = window.prompt("GitHub nickname:", "");
 	let gen_filename = window.prompt("File name in '\\kay-softtware-cloud\\' repository:");
 	switch (true) {
