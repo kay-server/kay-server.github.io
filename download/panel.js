@@ -1,3 +1,4 @@
+const panel = "https://kay-software.ru/download/"
 const copyrights = '<h3>Powered by <a href="https://kay-software.ru/" target="_blank">Kay Software</a> company</h3><a href="../download-panel" target="_blank" style="font-size: 14px; color: gray;"><br><img src="banner.png" height="120" width="270"></a>';
 const paramsList = new URLSearchParams(document.location.search);
 const cloud = "https://raw.githubusercontent.com/";
@@ -29,7 +30,7 @@ if (currentFileName !== null) {
 	currentFileName = currentFileName.trim();
 }
 switch (currentFileName) {
-	case "":req_err();break;case null:req_err();break;default:
+	case '':req_err();break;case null:req_err();break;default:
 		try {
 			switch (true) {
 				case (currentFileName.length > 55):lgh_err();break;
@@ -50,6 +51,9 @@ switch (currentFileName) {
 			console.log("Error: " + e + " [Main]");
 		}
 	break;
+}
+if (paramsList.get('open-generator') !== null) {
+	generator();
 }
 function generator() {
 	try {
@@ -78,7 +82,7 @@ function generate() {
 		});
 		let gen_account = document.getElementById('account').value;
 		let gen_filename = document.getElementById('file').value;
-		let result = 'https://kay-software.ru/download?file=' + encodeURI(gen_filename) + "&from=" + encodeURI(gen_account);
+		let result = panel + '?file=' + encodeURI(gen_filename) + "&from=" + encodeURI(gen_account);
 		if (gen_filename.trim() !== "") {
 			document.getElementById('result-output').value = result;
 		} else {
@@ -94,7 +98,7 @@ function ver(type) {
 	} else if (type == 0) {verification_code = dev_code_source;}
 }
 function openSite() {
-	location = "../download-panel";
+	newTab("../download-panel");
 }
 function newTab(url) {
 	window.open(url, '_blank').focus();
@@ -112,4 +116,19 @@ function copyText(str) {
 	el.select();
 	document.execCommand('copy');
 	document.body.removeChild(el);
+}
+
+
+// Fast Dialog link generator
+if (paramsList.get('fast-gen') !== null) {
+	let gen_account = window.prompt("GitHub nickname:", "");
+	let gen_filename = window.prompt("File name in '\\kay-softtware-cloud\\' repository:");
+	switch (true) {
+		case (gen_filename == null)||(gen_filename.trim() == ""):alert("Input error.");break;
+		default:
+			if (gen_account == "") {gen_account = defaultAccount;}
+			let result = panel + '?file=' + encodeURI(gen_filename) + "&from=" + encodeURI(gen_account);
+			window.prompt("Result:", result);
+			if (confirm("Open generated URL?\n\n" + result)) {location = result;}	
+	}
 }
