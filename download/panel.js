@@ -45,9 +45,6 @@ switch (currentFileName) {
 							console.log("Error: " + e + " [Download]");
 						}
 					}
-					function copyResult() {
-						copyText(document.getElementById('result-output').value);
-					}
 			}
 		} catch (e) {
 			console.log("Error: " + e + " [Main]");
@@ -101,6 +98,9 @@ function opensite() {
 }
 function newTab(url) {
 	window.open(url, '_blank').focus();
+}
+function copyResult() {
+	copyText(document.getElementById('result-output').value);
 }
 function copyText(str) {
 	const el = document.createElement('textarea');
