@@ -30,12 +30,19 @@
 		</style>
 	</head>
 	<body>
-			<div style="width: 600px; height: 600px; margin: 10px auto; text-align: center;" id="gui">
-				<noscript>
-					<br><h2 style="color: pink;">Enable JavaScript!</h2><hr><h3 style="color: white;">It looks like you have JavaScript turned off in your browser. Without it, we will not be able to open this page. Please enable this option in your settings or use a different browser.</h3><hr><h3>Powered by <a href="https://kay-software.ru/" target="_blank">Kay Software</a> company</h3><a href="../download-panel" target="_blank" style="font-size: 14px; color: gray; text-decoration: underline;">USE THIS FILE EXCHANGER WITHOUT LIMITS FOR FREE</a>
-				</noscript>
-			</div>
-		<script type="text/javascript" src="jquery.js"></script>
-		<script type="text/javascript" src="panel.js"></script>
+		<div style="width: 600px; height: 600px; margin: 10px auto; text-align: center;" id="gui">
+			<noscript>
+				<br><h2 style="color: pink;">Enable JavaScript!</h2><hr><h3 style="color: white;">It looks like you have JavaScript turned off in your browser. Without it, we will not be able to open this page. Please enable this option in your settings or use a different browser.</h3><hr><h3>Powered by <a href="https://kay-software.ru/" target="_blank">Kay Software</a> company</h3><a href="../download-panel" target="_blank" style="font-size: 14px; color: gray; text-decoration: underline;">USE THIS FILE EXCHANGER WITHOUT LIMITS FOR FREE</a>
+			</noscript>
+		</div>
+		<script type="text/javascript" id="references">
+			function init(src) {
+				var LibraryWorker = document.createElement("script");
+				LibraryWorker.setAttribute("src", src);
+				document.body.appendChild(LibraryWorker);
+			}
+			init("jquery.js");
+			init("panel.js");
+		</script>
 	</body>
 </html>

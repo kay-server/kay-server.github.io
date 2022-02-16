@@ -4,8 +4,8 @@ const verification_code_source = '<img src="verified.png" width="16" height="16"
 const paramsList = new URLSearchParams(document.location.search);
 const cloud = 'https://raw.githubusercontent.com/';
 const defaultAccount = 'kay-server';
-let currentFileName = paramsList.get('file');
-let account = paramsList.get('from');
+let currentFileName = paramsList.get("file");
+let account = paramsList.get("from");
 switch (account) {case "":account = defaultAccount;break;case null:account = defaultAccount;break;}
 let verification_code = '';
 switch (account) {
@@ -15,7 +15,7 @@ switch (account) {
 	case "MichurinDev":ver(1);break;
 	case "dev-alfin-dk":ver(1);break;
 }document.title = 'File "' + currentFileName + '" | Kay Download Panel';
-let DownloadWorkerZone = document.getElementById('gui');
+let DownloadWorkerZone = document.getElementById("gui");
 function req_err() {
 	console.log("Request is empty.");
 	document.title = 'Kay Download Panel';
