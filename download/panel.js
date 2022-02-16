@@ -1,9 +1,9 @@
-const panel = window.location.hostname + "/download/"
+const panel = window.location.protocol + '//' + window.location.hostname + '/download/'
 const copyrights = '<h3>Powered by <a href="https://kay-software.ru/" target="_blank">Kay Software</a> company</h3><a href="../download-panel" target="_blank" style="font-size: 14px; color: gray;"><br><img src="banner.png" height="120" width="270"></a>';
 const verification_code_source = '<img src="verified.png" width="16" height="16" style="cursor: pointer; margin: -2.5px;" title="Verified"><br><span style="color: gray;">The file is checked for viruses.</span>';const dev_code_source = '<img src="verified.png" width="16" height="16" style="cursor: pointer; margin: -2.5px;" title="Verified (service account)"><br><span style="color: gray; font-size: 14px;">The files were uploaded by a service account and<br>do not contain malicious code.</span>';
 const paramsList = new URLSearchParams(document.location.search);
-const cloud = "https://raw.githubusercontent.com/";
-const defaultAccount = "kay-server";
+const cloud = 'https://raw.githubusercontent.com/';
+const defaultAccount = 'kay-server';
 let currentFileName = paramsList.get('file');
 let account = paramsList.get('from');
 switch (account) {case "":account = defaultAccount;break;case null:account = defaultAccount;break;}
