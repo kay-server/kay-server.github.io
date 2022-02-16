@@ -18,12 +18,12 @@ let DownloadWorkerZone = document.getElementById('gui');
 function req_err() {
 	console.log("Request is empty.");
 	document.title = 'Kay Download Panel';
-	DownloadWorkerZone.innerHTML = '<br><h2>Kay Download Panel</h2><h3>For free. Forever.</h3><hr><h3 style="color: white;">Use file hosting without limits for free. Read how it works and how you can upload your files here.<br><br><button onclick="opensite()" class="kay-download-panel-menu-button" style="font-size: 25px;">Documentation</button><br><a onclick="generator()"><b style="cursor: pointer; text-decoration: underline;">File link generator</b></a><br><br></h3><hr>' + copyrights;
+	DownloadWorkerZone.innerHTML = '<br><h2>Kay Download Panel</h2><h3>For free. Forever.</h3><hr><h3 style="color: white;">Use file hosting without limits for free. Read how it works and how you can upload your files here.<br><br><button onclick="openSite()" class="kay-download-panel-menu-button" style="font-size: 25px;">Documentation</button><br><a onclick="generator()"><b style="cursor: pointer; text-decoration: underline;">File link generator</b></a><br><br></h3><hr>' + copyrights;
 }
 function lgh_err() {
-	console.log("Request is empty.");
+	console.log("Too big request.");
 	document.title = 'Request error | Kay Download Panel';
-	DownloadWorkerZone.innerHTML = '<br><h2 style="color: pink;">Too big request.</h2><h3>Service error.</h3><hr><h3 style="color: white;">The server received too large a request. The file name cannot exceed 55 characters. The maximum number of characters in a nickname is 30.<br><br><button onclick="opensite()" class="kay-download-panel-menu-button" style="font-size: 22px;">Documentation</button><br><br></h3><hr>' + copyrights;
+	DownloadWorkerZone.innerHTML = '<br><h2 style="color: pink;">Too big request.</h2><h3>Service error.</h3><hr><h3 style="color: white;">The server received too large a request. The file name cannot exceed 55 characters. The maximum number of characters in a nickname is 30.<br><br><button onclick="openSite()" class="kay-download-panel-menu-button" style="font-size: 22px;">Documentation</button><br><br></h3><hr>' + copyrights;
 }
 if (currentFileName !== null) {
 	currentFileName = currentFileName.trim();
@@ -93,7 +93,7 @@ function ver(type) {
 		verification_code = verification_code_source;
 	} else if (type == 0) {verification_code = dev_code_source;}
 }
-function opensite() {
+function openSite() {
 	location = "../download-panel";
 }
 function newTab(url) {
