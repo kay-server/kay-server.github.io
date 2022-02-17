@@ -10,7 +10,7 @@ switch (account) {case "":account = defaultAccount;break;case null:account = def
 let verification_code = '';
 switch (account) {
 	case defaultAccount:ver(0);break;
-	case "Vindikeitor":ver(1);break;	
+	case "Vindikeitor":ver(1);break;
 	case "lrmpsm53":ver(1);break;
 	case "MichurinDev":ver(1);break;
 	case "dev-alfin-dk":ver(1);break;
