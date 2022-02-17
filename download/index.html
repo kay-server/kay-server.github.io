@@ -1,9 +1,10 @@
 <!--
 
- KAY DOWNLOAD PANEL [v1.5] - Kay Software company
+ WEB-APPLICATION "KAY DOWNLOAD PANEL" [v1.7] - Kay Software company
+
   USING: "https://kay-software.ru/download/?file={FILE_NAME}" (for downloading from Kay-Server)
    or
-  USING: "https://kay-software.ru/download/?file={FILE_NAME}&from={GITHUB_ACCOUNT}" (for downloading file from your github account; Public repository "kay-software-cloud")
+  USING: "https://kay-software.ru/download/?file={FILE_NAME}&from={GITHUB_ACCOUNT}" (for downloading file from user github account; Public repository "kay-software-cloud")
 	That is, the service takes your GitHub nickname and looks for the "kay-software-cloud" repository using it. From there, the site downloads the desired file
 	For example: "https://kay-software.ru/download/?file=java-application.exe&from=githubuser"
   
@@ -35,15 +36,10 @@
 				<br><h2 style="color: pink;">Enable JavaScript!</h2><hr><h3 style="color: white;">It looks like you have JavaScript turned off in your browser. Without it, we will not be able to open this page. Please enable this option in your settings or use a different browser.</h3><hr><h3>Powered by <a href="https://kay-software.ru/" target="_blank">Kay Software</a> company</h3><a href="../download-panel" target="_blank" style="font-size: 14px; color: gray; text-decoration: underline;">USE THIS FILE EXCHANGER WITHOUT LIMITS FOR FREE</a>
 			</noscript>
 		</div>
+		<script type="text/javascript" id="runtime" src="loader.js"></script>
 		<script type="text/javascript" id="references">
-			function init(src) {
-				var LibraryWorker = document.createElement("script");
-				LibraryWorker.setAttribute("src", src);
-				document.body.appendChild(LibraryWorker);
-			}
-
-			init("jquery.js");
-			init("panel.js");
+			references.Add("jquery.js");
+			references.Add("panel.js");
 		</script>
 	</body>
 </html>
