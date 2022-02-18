@@ -60,14 +60,14 @@ function generator() {
 		DownloadWorkerZone.innerHTML = `
 		<br><h2>Kay Download Panel</h2><h3>Links generator</h3><hr>
 		<form id="kay-gen">
-			<p style="margin: -2px;">Account name:</p><input placeholder="GitHub nickname" name="github_file" id="account" size="30" class="generator-input" outline: none;" type="git_account" autocomplete="on"><br><br>
-			<p style="margin: -2px;">File name:</p><input placeholder="File in '\\kay-software-cloud\\' repository" name="github_nick" id="file" size="30" class="generator-input"; outline: none;" type="git_file" autocomplete="on">
+			<p style="margin: -2px;">Account name:</p><input placeholder="GitHub nickname" name="github_file" id="account" size="30" class="generator-input" style="outline: none;" type="git_account" autocomplete="on"><br><br>
+			<p style="margin: -2px;">File name:</p><input placeholder="File in '\\kay-software-cloud\\' repository" name="github_nick" id="file" size="30" class="generator-input"; style="outline: none;" type="git_file" autocomplete="on">
 		</form>
 		<br><br>
 		<button class="kay-download-panel-menu-button" style="font-size: 22px; color: pink; width: 85px;" onclick="req_err()">Back</button>
 		<button type="submit" form="kay-gen" class="kay-download-panel-menu-button" style="font-size: 20px;" onclick="generate()">Create URL</button></form>
 		<br><br><br><h3 style="margin: -4px;">------------------------ RESULT ------------------------</h3>
-		<p><input value="Waiting for result..." id="result-output" id="file" size="22" style="font-size: 20px; background-color: black; color: #ffeabf; text-align: center; cursor: default;" readonly><button onclick="copyResult()" style="background-color: black; color: white; outline: none; font-size: 22px; cursor: default;">COPY</button></p><h3 style="margin: -27px;">-------------------------------------------------------------</h3><br><br><hr>
+		<p><input value="Waiting for result..." id="result-output" id="file" size="22" style="font-size: 20px; background-color: black; color: #ffeabf; text-align: center; cursor: default;" readonly><button class="default-button" onclick="copyResult()">Copy</button></p><h3 style="margin: -27px;">-------------------------------------------------------------</h3><br><br><hr>
 		` + copyrights;
 	} catch (e) {
 		console.log("Error: " + e + " [Generator]");
