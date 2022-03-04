@@ -1,5 +1,5 @@
 <!--
-    Kay Software API
+    Kay Software Client-API
     [ REDIRECT ]
     { https://kay-software.ru/api/redirect/?url=FULL_LINK }
 -->
@@ -11,15 +11,15 @@
 		<link type="Image/x-icon" href="../../favicon.ico" rel="icon">
 		<link rel="stylesheet" href="../../assets/css/style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=0.5">
-		<title>Kay Download Panel</title>
+		<title>Kay Software Client-API</title>
 		<meta name="description" content="Redirect page">
     </head>
     <body>
         <p id="status"><noscript>JavaScript runtime not found in your browser.</noscript></p>
         <script>
             const request = new URLSearchParams(document.location.search);
-            const URL_Target = request.get("url"); 
             const info = document.getElementById("status");
+            const URL_Target = request.get("url");
             info.innerHTML = "Redirecting at " + URL_Target + "...";
             setTimeout(function() {
                 try {
@@ -32,7 +32,6 @@
                             location = URL_Target;
                         }
                     }
-                    
                 } catch (exception) {
                     info.innerHTML = "Service client exception.";
                 }
