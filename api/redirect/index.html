@@ -1,0 +1,42 @@
+<!--
+    Kay Software API
+    [ REDIRECT ]
+    { https://kay-software.ru/api/redirect/?url=FULL_LINK }
+-->
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+		<link type="Image/x-icon" href="../../favicon.ico" rel="icon">
+		<link rel="stylesheet" href="../../assets/css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=0.5">
+		<title>Kay Download Panel</title>
+		<meta name="description" content="Redirect page">
+    </head>
+    <body>
+        <p id="status"><noscript>JavaScript runtime not found in your browser.</noscript></p>
+        <script>
+            const request = new URLSearchParams(document.location.search);
+            const URL_Target = request.get("url"); 
+            const info = document.getElementById("status");
+            info.innerHTML = "Redirecting at " + URL_Target + "...";
+            setTimeout(function() {
+                try {
+                    info.innerHTML = "Processed. Please, wait...";
+                    switch (URL_Target) {
+                        case "": info.innerHTML = "Empty request body."; break;
+                        case null: info.innerHTML = "Empty request."; break;
+                        default:
+                        with (document) {
+                            location = URL_Target;
+                        }
+                    }
+                    
+                } catch (exception) {
+                    info.innerHTML = "Service client exception.";
+                }
+            }, 550);
+        </script>
+    </body>
+</html>
