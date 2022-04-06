@@ -7,13 +7,13 @@
 	<body>
 		<br>
 		<h1 style="text-align: center;">Page not found.</h1><hr>
-		<h2>Redirecting... <span id="timer">Wait...</span></h2>
+		<h2 style="text-align: center;">Redirecting... <span id="timer">Wait...</span></h2>
 		<script type="text/javascript">
 			var index = 11;
 			setInterval(function() {
 				index--;
 				let redirect = document.getElementById("timer").innerHTML = index;
-				if (index == 0) {
+				if (index == 1) {
 					location = "/"
 				}
 			}, 990)
