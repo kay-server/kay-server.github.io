@@ -1,13 +1,25 @@
 <!doctype html>
 <!-- [Kay Server] Copyright, (C) DosX -->
-<head>
-	<link rel="stylesheet" href="/assets/css/style.css">
-	<br>
-	<h1 style="text-align: center;">Page not found.</h1>
-	<noscript> <!-- Browser doesn't support scripts -->
-		<meta http-equiv="refresh" content="0;URL=/">
-	</noscript>
-	<script type="text/javascript"> <!-- JavaScript redirect -->
-		location="/";
-	</script>
-</head>
+<html>
+	<head>
+		<link rel="stylesheet" href="/assets/css/style.css">
+	</head>
+	<body>
+		<br>
+		<h1 style="text-align: center;">Page not found.</h1><hr>
+		<h2>Redirecting... <span id="timer">Wait...</span></h2>
+		<script type="text/javascript">
+			var index = 11;
+			setInterval(function() {
+				index--;
+				let redirect = document.getElementById("timer").innerHTML = index;
+				if (index == 0) {
+					location = "/"
+				}
+			}, 990)
+		</script>
+		<noscript>
+			<meta http-equiv="refresh" content="0;/">
+		</noscript>
+	</body>
+</html>
