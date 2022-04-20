@@ -3,7 +3,7 @@ fetch('https://api.ipregistry.co/?key=tryout')
         return response.json();
     })
     .then(function (payload) {
-        if (payload.location.country.name.tolLowerCase().includes("ua")) {
+        if (payload.location.country.name.toLowerCase().includes("ua")) {
             from_ukr();
         }
     });
