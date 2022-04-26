@@ -9,4 +9,6 @@ $root> cmp load config _*
 $root> as-local setport kay-software-network list 39 40 41 42
 $root> block kay-software-network private list 851 869
 $root> block kay-software-network public list 1932 4421 9245
-$root> config add server "https://cloud.server.kay-software.ru/boot.txt"
+$root> config add server "main.*"
+$root> protectme -config ":main.*"
+$root||protectme> startup
