@@ -45,7 +45,7 @@
                 function ok() {
                     location = "/";
                 }
-				if(localStorage.getItem("resolution") == ""){
+				if(localStorage.getItem("resolution") == null){
     localStorage.setItem("resolution", "noShow"); // не показывать
     alert("1");
 }
