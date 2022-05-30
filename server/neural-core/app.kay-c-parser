@@ -5,6 +5,9 @@ include link kay-servers
 include link kay-servers-api
 include link kay-servers-api-health
 include link kay-servers-api-diagnostics
+include packet packetsv9
+include packet asmdev
+include packet [static].data
 
 ~!_0:"get_Message" .Current
  "response":"1":
@@ -55,7 +58,7 @@ em-s>sa-m,~0&15<em-s={
  !_@
 _ds-r.rules{
  .format "$-0-15.\[10],i=4'i',<'<','>'~seed"{..:_build}["neural"] "set"
- .format$ "!(1[~2[3[-4[5[6.s[7[8[9[*index.{val}]=>nul]],5],10],15],20],25],35])"
+ .format$ "!(1[~2[3[-4[5[6.s[7[8[9[*index.{val}]=>nul]],5],10],15],20],25],35]~AS [a-z,A-Z,0-9])"
  .format$1 "[~>{' '}]" "x2" "!=5"
 }
 #*/
@@ -81,7 +84,7 @@ $ _\(2) [:_arg] --API[~0{"response";"get"}]{_x}
 _build:.seed<_&$&|0|10|>seed.book="_arg.{result !index~$(DataSet)_ds-r.rules}":
   \0|[+1,:#..list].namespace "neuro.\{ref<$CORE}" FR PROJ0_START,PROJ1_START:
     #.\1<"$-5-0.\a{!>'1< FR :#[{+&&-}1]'}";
-ref=><nul\(([%%s]*.seed^>):!~>1{"x2 x1 x3 0 0 0"||".seed\CORE"})
+ref=><nul\(([%%s]*.seed^>):!~>1{"x2 x1 x3 0 1 0"||".seed\CORE"})
 ref(if).+1&^>,!<<true;(if).-1&^<!<<false
 _build console.Shell ~>0|*5*neural-x./val[val.%%s.index(#"x2\.\.\.7\!seed")]
  !1 _build console.Send PORT_LOADER "~#<.^result+'%s[@return=<format]'>."
