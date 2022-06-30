@@ -1,3 +1,3 @@
-const app_domain = "kay-software.ru";
-const content = "../";
+const app_domain = "custom";
+const content = "/content/";
 const content_data = "txt";

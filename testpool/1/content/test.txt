@@ -1,0 +1,8 @@
+<!--
+__article__
+author_name: 1=https://kay-software.ru/dosx
+article_name: test
+publication_date: 30 Июня 2022
+-->
+<h2>Добро пожаловать</h2>
+<p>В <b>Kay Web Articles Renderer EDITOR</b> Вы можете не утруждаться над созданием нового контента. Всё, что нужно - знание HTML на <i>базовом уровне</i>.</p>
