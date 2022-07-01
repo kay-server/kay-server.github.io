@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OpenSitemapGeneratorSession xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="dev.citazioni.tk">
+  <local_url>https://kay-software.ru/</local_url>
+  <remote_url />
+  <url_substitution>false</url_substitution>
+  <sitemap_filepath>C:\Users\1\Documents\GitHub\server\sitemap.xml</sitemap_filepath>
+  <global_lastmod>2022-07-01T22:35:42.9886042+03:00</global_lastmod>
+  <global_setcurrenttime>true</global_setcurrenttime>
+  <global_changefreq>-1</global_changefreq>
+  <global_priority>5</global_priority>
+  <base_lastmod>2022-07-01T22:35:42.9886042+03:00</base_lastmod>
+  <base_setcurrenttime>true</base_setcurrenttime>
+  <base_changefreq>-1</base_changefreq>
+  <base_priority>0</base_priority>
+  <extensions_ignore>css js ico gif bmp tiff mpg wmv mp3 mpeg zip gzip</extensions_ignore>
+  <urls_ignore />
+  <show_lastmod>true</show_lastmod>
+  <show_changefreq>true</show_changefreq>
+  <show_priority>true</show_priority>
+  <crawl_interval>3</crawl_interval>
+  <proxy_use>false</proxy_use>
+  <proxy_addr />
+  <proxy_user />
+  <proxy_passwd />
+  <proxy_bypasslocal>true</proxy_bypasslocal>
+  <si_baseurl />
+  <show_si_lastmod>true</show_si_lastmod>
+  <si_lastmod>2022-07-01T22:35:42.9886042+03:00</si_lastmod>
+  <si_setcurrenttime>true</si_setcurrenttime>
+  <ignoreHTMLcomments>true</ignoreHTMLcomments>
+  <url_isdir>true</url_isdir>
+</OpenSitemapGeneratorSession>
