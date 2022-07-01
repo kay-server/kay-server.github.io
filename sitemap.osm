@@ -27,6 +27,6 @@
   <show_si_lastmod>true</show_si_lastmod>
   <si_lastmod>2022-07-01T22:35:42.9886042+03:00</si_lastmod>
   <si_setcurrenttime>true</si_setcurrenttime>
-  <ignoreHTMLcomments>true</ignoreHTMLcomments>
+  <ignoreHTMLcomments>false</ignoreHTMLcomments>
   <url_isdir>true</url_isdir>
 </OpenSitemapGeneratorSession>
