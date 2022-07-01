@@ -4,13 +4,13 @@ author_name: DosX=https://kay-software.ru/dosx
 article_name: C# Fast-Compiler - подпольная IDE для C#
 publication_date: 1 Июля 2022
 -->
-<img src="/cs-fast-compiler/img/cs-ide-pic.png" style="display: block; margin-left: auto; margin-right: auto" width="520" height="285"/>
+<img src="/content/cs-fast-compiler/img/cs-ide-pic.png" style="display: block; margin-left: auto; margin-right: auto" width="520" height="285"/>
 <br>
 <h2>О программе</h2>
 <p>Бесплатная IDE для Windows со встроенным компилятором C#. Рассчитана для быстрого создания консольных проектов или тестирования исходных кодов.</p>
 <h2>Скачать</h2>
 <p>Вы можете получить и установить C# Fast-Compiler на свой компьютер, скачав необходимые файлы здесь.</p>
-<p><b>Программа: </b><a download target="_blank" href="/cs-fast-compiler/download/cs-fast-compiler.zip">Скачать портативную версию (AnyCPU)</a></p>
-<p><b>Исходный код проекта: </b><a download target="_blank" href="/cs-fast-compiler/source/cs-fast-compiler-source.zip">Скачать исходный код (C#)</a></p>
+<p><b>Программа: </b><a download target="_blank" href="/content/cs-fast-compiler/download/cs-fast-compiler.zip">Скачать портативную версию (AnyCPU)</a></p>
+<p><b>Исходный код проекта: </b><a download target="_blank" href="/content/cs-fast-compiler/source/cs-fast-compiler-source.zip">Скачать исходный код (C#)</a></p>
 <h2>Компиляция</h2>
 <p>Если код написан правильно, то в папке bin появится результат компиляции и сразу запустится. Имя файла зависит от написанного названия проекта в программе. Если при построении возникла ошибка, то выведется сообщение с информацией об исключении</p>
