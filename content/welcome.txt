@@ -4,7 +4,7 @@ author_name: DosX=https://kay-software.ru/dosx
 article_name: Добро пожаловать!
 publication_date: Дата публикации скрыта
 -->
-<object type="image/svg+xml" data="/welcome.svg" width="250" height="250" style="display: block; margin: 0 auto;"></object><br>
+<object type="image/svg+xml" data="welcome/welcome.svg" width="250" height="250" style="display: block; margin: 0 auto;"></object><br>
 <h2>Чувствуйте себя уютно вместе с Kay Server!</h2>
 <p>Kay Server - открытый информационный ресурс, разработанный компанией Kay Software. Здесь Вы можете набраться полезных знаний, найти ответы на свои вопросы или воспользоваться любыми другими предоставляемыми услугами. Во главе стоит DosX - главный администратор сайта и довольно скромная (сейчас, по крайней мере) команда.</p>
 <h2>Поддержка</h2>
