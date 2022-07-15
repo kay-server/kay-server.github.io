@@ -1,5 +1,6 @@
 $.get("https://ipinfo.io", function(response) {
     switch(response.country) {
+        case "JP":
         case "UA":
         case "AU":
         case "CH":
