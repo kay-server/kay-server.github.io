@@ -1,13 +1,14 @@
-fetch('https://api.ipregistry.co/?key=tryout')
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (payload) {
-        if (payload.location.country.name.toLowerCase().includes("ua")) {
-            from_ukr();
-        }
-    });
+$.get("https://ipinfo.io", function(response) {
+    switch(response.country) {
+        case "AU":
+        case "CH":
+        case "AT":
+        case "CA":
+        case "US":
+            blocked(response.country);break;
+    }
+}, "jsonp");
 
-function from_ukr() {
-    alert("Kay Software перестал работать на территории вашей страны. Клиенты из Украины на данный момент не обслуживаются. За подробностями обратитесь в тех. поддержку.")
+function blocked(c) {
+    location="/block?src=" + c;
 }
