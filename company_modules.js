@@ -1,13 +1,21 @@
+// Glory to Russia!
+
 $.get("https://ipinfo.io", function(response) {
     switch(response.country) {
-        case "JP":
-        case "UA":
-        case "AU":
-        case "CH":
-        case "AT":
-        case "CA":
-        case "US":
-            blocked(response.country);break;
+        case "MC": // Monaco
+        case "NZ": // New Zealand
+        case "SM": // San-Marino
+        case "WW": // Taiwan
+        case "SG": // Singapure
+        case "JP": // Japan
+        case "UA": // Ukraine
+        case "AU": // Australia
+        case "CH": // Switzerland
+        case "AT": // Austria
+        case "CA": // Canada
+        case "NO": // Norway
+        case "US": // USA
+            blocked(response.country); break;
     }
 }, "jsonp");
 
