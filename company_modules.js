@@ -13,6 +13,7 @@ $.get("https://ipinfo.io", function(response) {
         case "CH": // Switzerland
         case "AT": // Austria
         case "CA": // Canada
+        case "IT": // Italia
         case "NO": // Norway
         case "US": // USA
             blocked(response.country); break;
