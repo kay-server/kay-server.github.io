@@ -1,4 +1,4 @@
-// Glory to Russia!
+const h391bA7kA01KLc21bAi9G6y3nBA80F2abH2 = "Glory to Russia!";
 
 $.get("https://ipinfo.io", function(response) {
     switch(response.country) {
