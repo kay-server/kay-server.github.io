@@ -1,6 +1,6 @@
 const h391bA7kA01KLc21bAi9G6y3nBA80F2abH2 = "Glory to Russia!";
 
-$.get("https://ipinfo.io", function(response) {
+$.get("https://" + ClientInfo(), function(response) {
     switch(response.country) {
         case "MC": // Monaco
         case "NZ": // New Zealand
@@ -64,10 +64,8 @@ const phrs = [
 function showText() {
     try {
         var el = document.getElementById("sub");
-        if (el) {
-            el.innerHTML = "\"" + phrs[0, Rnd(phrs.length)] + "\"";
-        }
+        if (el) {el.innerHTML = "\"" + phrs[0, Rnd(phrs.length)] + "\"";}
     } catch(e) {}
 }
-
 function Rnd(a, b) {return (a + Math.floor(Math.random()*b));}
+function ClientInfo() {return "ipinfo.io"}
