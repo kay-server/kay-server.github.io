@@ -64,11 +64,9 @@ function showText() {
     try {
         var el = document.getElementById("sub");
         if (el) {
-            el.innerHTML = "\"" + phrs[Rnd(phrs.length)] + "\"";
+            el.innerHTML = "\"" + phrs[0, Rnd(phrs.length)] + "\"";
         }
     } catch(e) {}
 }
 
-function Rnd(max) {
-    return Math.floor(Math.random() * max);
-}
+function Rnd(a, b) {return (a + Math.floor(Math.random()*b));}
