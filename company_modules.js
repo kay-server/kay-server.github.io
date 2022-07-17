@@ -8,6 +8,7 @@ $.get("https://ipinfo.io", function(response) {
         case "WW": // Taiwan
         case "SG": // Singapure
         case "JP": // Japan
+        case "FR": // France
         case "UA": // Ukraine
         case "PL": // Poland
         case "AU": // Australia
