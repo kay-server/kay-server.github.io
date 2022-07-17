@@ -1,6 +1,9 @@
 const h391bA7kA01KLc21bAi9G6y3nBA80F2abH2 = "Glory to Russia!";
 
-$.get("https://" + ClientInfo(), function(response) {
+const API = {ClientInfo() {return "https://" + "ipinfo.io";}}
+const Kick = {RegionalBlock(c) {location="/block?src=" + c;}}
+
+$.get(API.ClientInfo(), function(response) {
     switch(response.country) {
         case "MC": // Monaco
         case "NZ": // New Zealand
@@ -8,9 +11,9 @@ $.get("https://" + ClientInfo(), function(response) {
         case "WW": // Taiwan
         case "SG": // Singapure
         case "JP": // Japan
-        case "FR": // France
         case "UA": // Ukraine
         case "PL": // Poland
+        case "FR": // France
         case "AU": // Australia
         case "CH": // Switzerland
         case "AT": // Austria
@@ -18,7 +21,7 @@ $.get("https://" + ClientInfo(), function(response) {
         case "IT": // Italia
         case "NO": // Norway
         case "US": // USA
-            blocked(response.country); break;
+            Kick.RegionalBlock(response.country); break;
 
         case "RU": // Russia
         case "CN": // China
@@ -29,10 +32,6 @@ $.get("https://" + ClientInfo(), function(response) {
             showText(); break;
     }
 }, "jsonp");
-
-function blocked(c) {
-    location="/block?src=" + c;
-}
 
 const phrs = [
 "Слава усраине! Хероям в срало!",
@@ -64,8 +63,10 @@ const phrs = [
 function showText() {
     try {
         var el = document.getElementById("sub");
-        if (el) {el.innerHTML = "\"" + phrs[0, Rnd(phrs.length)] + "\"";}
+        if (el) {
+            el.innerHTML = "\"" + phrs[PsRand(0, phrs.length)] + "\"";
+        }
     } catch(e) {}
 }
-function Rnd(a, b) {return (a + Math.floor(Math.random()*b));}
-function ClientInfo() {return "ipinfo.io"}
+
+function PsRand(a, b) {return a + Math.floor(Math.random() * b);}
