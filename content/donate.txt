@@ -17,7 +17,6 @@ publication_date: 22 Июля 2022
 <div style="text-align: center;">
 <p2>LiteCoin:</p2>
 <p><input readonly style="color: #dbdbdb; background-color: rgb(48, 48, 48);" size=25 value="MCwRK1Z7K4GYHt9ZrbTR2SMCEqzqQaTbRF"> <span style="text-decoration: underline; color: #dbdbdb;">(от 0,001)</span></input></p>
-<p><br></p>
 <p2>USDT (ERC-20):</p2>
 <p><input readonly style="color: #dbdbdb; background-color: rgb(48, 48, 48);" size=25 value="0x334F093c9De6552AF4cC0B252dA82aC77FeB467D"> <span style="text-decoration: underline; color: #dbdbdb;">(от 5,000)</span></input></p>
 </div>
