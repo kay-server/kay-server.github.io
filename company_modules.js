@@ -12,7 +12,7 @@ const Features = {
         } catch(e) {}
     },
     PsRand(a, b) {return a + Math.floor(Math.random() * b);}
-}◘
+}
 
     // Фразы
     const phrs = [
