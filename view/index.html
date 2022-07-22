@@ -16,8 +16,30 @@
 <body>
 <div id="header">
 <nav>
-<li class="fork"><a href="..">BACK</a></li>
-<li class="title" id="sub">Article</li>
+<div class="navbar">
+<div class="logo">
+<object type="image/svg+xml" data="assets\images\Bez_imeni-2.svg" width="33" height="33"></object>
+</div>
+<div class="menu-top">
+<ul>
+<li><a class="links" href="#">DosX</a></li>
+<li><a class="links" href="#">Поддержать</a></li>
+<li><a class="links" href="#">Проекты</a></li>
+</ul>
+</div>
+<div class="menu-btn">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+<div class="menu menu-slice">
+<ul>
+<li><a class="links" href="#">DosX</a></li>
+<li><a class="links" href="#">Поддержать</a></li>
+<li><a class="links" href="#">Проекты</a></li>
+</ul>
+</div>
 </nav>
 </div>
 <div class="wrapper">
@@ -29,7 +51,6 @@
 <span class="credits left">Автор: <span id="author"><noscript><a>Ваш браузер</a></noscript></span></span>
 <span class="credits right"><a href=".." style="color: grey; text-decoration: underline;">На главную страницу</a></span>
 </div>
-
 <div id="web.container.article">
 <noscript>
 <h2>Эй</h2>
@@ -43,6 +64,12 @@
 <script>
     references.Add("app.strings");
     references.Add("app.main");
+    let menuBtn = document.querySelector('.menu-btn');
+let menu = document.querySelector('.menu');
+menuBtn.addEventListener('click', function(){
+	menuBtn.classList.toggle('active');
+	menu.classList.toggle('active');
+})
 </script>
 </section>
 </div>
