@@ -2,7 +2,7 @@
 __article__
 author_name: DosX=https://kay-software.ru/dosx
 article_name: Поддержать финансово
-publication_date: 22 Июля 2022
+publication_date: Дата публикации скрыта
 -->
 <h2>Спасибо!</h2>
 <p>Пожертвования помогут нам покрыть расходы на оборудование, программное обеспечение и кофе.</p>
