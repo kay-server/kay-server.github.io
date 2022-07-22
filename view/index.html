@@ -62,13 +62,13 @@
 <script src="loader/client.config.js" id="application.config"></script>
 <script src="loader/client.jquery.js" id="application.jquery_runtime"></script>
 <script>
-    references.Add("app.strings");
-    references.Add("app.main");
-    let menuBtn = document.querySelector('.menu-btn');
+	references.Add("app.strings");
+	references.Add("app.main");
+let menuBtn = document.querySelector('.menu-btn');
 let menu = document.querySelector('.menu');
 menuBtn.addEventListener('click', function(){
-	menuBtn.classList.toggle('active');
-	menu.classList.toggle('active');
+menuBtn.classList.toggle('active');
+menu.classList.toggle('active');
 })
 </script>
 </section>
