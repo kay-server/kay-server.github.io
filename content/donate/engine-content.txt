@@ -1,0 +1,15 @@
+<h2>Спасибо!</h2>
+<p>Пожертвования помогут нам покрыть расходы на оборудование, программное обеспечение и кофе.</p>
+<br>
+<div style="text-align: center;">
+<p2>LiteCoin (Криптовалюта):</p2>
+<br>
+<input readonly style="color: #dbdbdb; background-color: rgb(48, 48, 48);" value="MCwRK1Z7K4GYHt9ZrbTR2SMCEqzqQaTbRF"></input>
+<span style="text-decoration: underline; color: #dbdbdb;">(от 0,001)</span>
+<br>
+<br>
+<p2>USDT (ERC-20) (Криптовалюта):</p2>
+<br>
+<input readonly style="color: #dbdbdb; background-color: rgb(48, 48, 48);" value="0x334F093c9De6552AF4cC0B252dA82aC77FeB467D"></input>
+<span style="text-decoration: underline; color: #dbdbdb;">(от 5,000)</span>
+</div>

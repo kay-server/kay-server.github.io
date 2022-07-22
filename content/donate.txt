@@ -1,0 +1,21 @@
+<!--
+__article__
+author_name: DosX=https://kay-software.ru/dosx
+article_name: Поддержать финансово
+publication_date: 22 Июля 2022
+-->
+<h2>Спасибо!</h2>
+<p>Пожертвования помогут нам покрыть расходы на оборудование, программное обеспечение и кофе.</p>
+<p><br></p>
+<div style="text-align: center;">
+<p2>LiteCoin (Криптовалюта):</p2>
+<p><br></p>
+<p><input readonly style="color: #dbdbdb; background-color: rgb(48, 48, 48);" value="MCwRK1Z7K4GYHt9ZrbTR2SMCEqzqQaTbRF"></input></p>
+<p><span style="text-decoration: underline; color: #dbdbdb;">(от 0,001)</span></p>
+<p><br></p>
+<p><br></p>
+<p2>USDT (ERC-20) (Криптовалюта):</p2>
+<p><br></p>
+<p><input readonly style="color: #dbdbdb; background-color: rgb(48, 48, 48);" value="0x334F093c9De6552AF4cC0B252dA82aC77FeB467D"></input></p>
+<p><span style="text-decoration: underline; color: #dbdbdb;">(от 5,000)</span></p>
+</div>
