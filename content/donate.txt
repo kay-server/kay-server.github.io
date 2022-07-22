@@ -8,12 +8,12 @@ publication_date: 22 Июля 2022
 <p>Пожертвования помогут нам покрыть расходы на оборудование, программное обеспечение и кофе.</p>
 <p><br></p>
 <p><br></p>
-<h3>Рубли, евро, доллары</h3>
+<h3 style="text-align: center;">Рубли, евро, доллары</h3>
 <div style="text-align: center;">
 <p2>Payeer:</p2>
 <p><input readonly style="color: #dbdbdb; background-color: rgb(48, 48, 48);" size=19 value="P1066822521"> <span style="text-decoration: underline; color: #dbdbdb;">(Любая сумма)</span></input></p>
 </div>
-<h3>Криптовалюта</h3>
+<h3 style="text-align: center;">Криптовалюта</h3>
 <div style="text-align: center;">
 <p2>LiteCoin:</p2>
 <p><input readonly style="color: #dbdbdb; background-color: rgb(48, 48, 48);" size=25 value="MCwRK1Z7K4GYHt9ZrbTR2SMCEqzqQaTbRF"> <span style="text-decoration: underline; color: #dbdbdb;">(от 0,001)</span></input></p>
