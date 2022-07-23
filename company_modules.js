@@ -73,6 +73,11 @@ $.get(API.ClientInfo(), function(response) {
 }, "jsonp");
 
 function onCopyFunc() {
-    navigator.clipboard.writeText(getSelection() + "\n\nИсточник: " + document.URL);
+    try {
+        if (getSelection() !== "") {
+            navigator.clipboard.writeText(getSelection() + "\n\nИсточник: " + document.URL);
+        }
+    } catch(e) {}
 }
+
 document.oncopy = onCopyFunc;
