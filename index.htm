@@ -79,7 +79,7 @@
 </div>
 <br>
 <h3>Все доступные статьи:</h3>
-<div style="font-size: 15.5px;">
+<div class="multi-column" style="font-size: 15.5px;">
 <ol class="list3a">
 <li><a href="content/block-android-ads">Блокируем рекламу на Android</a></li>
 <li><a href="content/reduce-eye-fatigue-from-computer">Снижаем утомляемость глаз от компьютера</a></li>
@@ -110,6 +110,10 @@
 </div>
 </section>
 </div>
+<footer>
+    <p>© Kay Software (<span id="year"></span>). Все права защищены</p>
+    <a href="/content/donate">Поддержать рублём или битком</a>
+</footer>
 <script>
 let menuBtn = document.querySelector('.menu-btn');
 let menu = document.querySelector('.menu');
@@ -117,6 +121,8 @@ menuBtn.addEventListener('click', function(){
 menuBtn.classList.toggle('active');
 menu.classList.toggle('active');
 })
+let curDateObj = new Date();
+document.getElementById("year").innerHTML = curDateObj.getFullYear();
 </script>
 </body>
 </html>
