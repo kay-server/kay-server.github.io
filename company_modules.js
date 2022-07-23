@@ -71,3 +71,8 @@ $.get(API.ClientInfo(), function(response) {
             Features.UpdateSubTitle(); break;
     }
 }, "jsonp");
+
+function onCopyFunc() {
+    navigator.clipboard.writeText(getSelection() + "\n\nИсточник: " + document.URL);
+}
+document.oncopy = onCopyFunc;
