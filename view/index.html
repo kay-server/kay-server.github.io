@@ -12,6 +12,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="/company_modules.js"></script>
+<style>
+.go-back {
+display: inline-block;
+font-size: 15px;
+text-shadow: none;
+padding: 3px 13px;
+color: #313131;
+background: #004d4d;
+transition: 0.3s linear;
+border: 1px solid black;
+color: white;
+text-decoration: none;
+}
+.go-back:hover {
+border: 1px solid black;
+background: white;
+color: black;
+}
+</style>
 </head>
 <body>
 <div id="header">
@@ -49,7 +68,7 @@
 <p id="name"><noscript>Что-то не то...</noscript></p>
 <hr>
 <span class="credits left">Автор: <span id="author"><noscript><a>Ваш браузер</a></noscript></span></span>
-<span class="credits right"><a href=".." style="color: grey; text-decoration: underline;">На главную страницу</a></span>
+<span class="credits right"><a href=".." class="go-back">На главную страницу</a></span>
 </div>
 <div id="web.container.article">
 <noscript>
