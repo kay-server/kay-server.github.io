@@ -197,7 +197,7 @@ ul { list-style-image: url("../images/bullet.png"); }
 
 strong { font-family: 'OpenSansBold', "Helvetica Neue", Helvetica, Arial, sans-serif !important; font-weight: normal; }
 
-.wrapper { max-width: 1000px; margin: 0 auto; position: relative; padding: 0 20px; }
+.wrapper { max-width: 1000px; height: 90%; margin: 0 auto; padding: 0 20px; }
 
 section img { max-width: 100%; }
 
@@ -226,7 +226,7 @@ dt { color: #F0E7D5; font-family: 'OpenSansSemibold', "Helvetica Neue", Helvetic
 #header nav li.panel2 { float: right; margin-left: 6px; }
 #header nav li.title { float: right; margin-right: 12px; font-size: 13px; font-weight: bold; }
 
-section { max-width: 1000px; padding: 30px 0px 50px 0px; margin: 20px 0; margin-top: 70px; }
+section { max-width: 1000px; padding: 30px 0px 50px 0px; margin: 20px 0; margin-top: 70px;  height: 100%;}
 section #title { border: 0; outline: none; margin: 0 0 50px 0; padding: 0 0 5px 0; }
 section #title h1 { font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 40px; text-align: center; line-height: 36px; }
 section #title p { color: #d7cfbe; font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 18px; text-align: center; }
@@ -260,16 +260,5 @@ section #title .credits.right { float: right; }
 .list3a li:hover:before { color: #e8e8e8;}
 .multi-column {-moz-column-count: 2;-moz-column-gap: 20px;-moz-column-fill: auto;-webkit-column-count: 2;-webkit-column-gap: 20px;-webkit-column-fill: auto;column-count: 2;column-gap: 20px;column-fill: auto;}
 @media screen and (max-width: 1000px){.multi-column{-moz-column-count: 1;-webkit-column-count: 1;column-count: 1;}}
-footer{
-   background: #121212;
-   padding: 10px 0;
-   text-align: center;
-   position:absolute;
-   width:100%;
-   border-top: 3px solid grey;
-}
-
-footer p{
-   color: #b6b6b6;
-   margin: 0;
-}
+footer{background: #121212;padding: 10px 0;text-align: center;position:relative;width:100%;border-top: 3px solid grey;top: 14px;}
+footer p{color: #b6b6b6;margin: 0;}
