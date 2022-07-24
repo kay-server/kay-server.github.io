@@ -8,7 +8,7 @@
     <body>
         <script>
             function PsRand(a, b) {return a + Math.floor(Math.random() * b);}
-            fetch(PsRand(0, 6220) & ".txt").then(response => response.text()).then(code => document.write(code));
+            fetch("seed/" + PsRand(0, 6220) + ".txt").then(response => response.text()).then(code => document.write(code));
         </script>
     </body>
 </html>
