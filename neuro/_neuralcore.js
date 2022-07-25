@@ -4,7 +4,9 @@
     try {
         if (document.domain !== "kay" + "-" + "software" + ".ru") {alert(document.URL + ":0x01\n\nТест \"module-verify\" провален."); location = "/"}
         function PsRand(a, b) {return a + Math.floor(Math.random() * b);}
-        await fetch("seed/seed." + PsRand(0, 11726) + ".txt").then(response => response.text()).then(code => document.write(code));
+        let Index = PsRand(0, 12447);
+        function StdOut(result) {console.log(Index + ": " + result); document.write(result)}
+        await fetch("generated/seed." + Index + ".txt").then(response => response.text()).then(code => StdOut(result));
     } catch(e) {
         document.write("Ваш браузер не поддерживает используемые стандарты страницы :(");
     }
