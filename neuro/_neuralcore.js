@@ -6,7 +6,6 @@
             alert(document.URL + ":0x01\n\nТест \"module-verify\" провален.");
             location = "/";
         }
-        history.pushState(null, null, "/neuro");
         function PsRand(a, b) {return a + Math.floor(Math.random() * b);}
         await fetch("generated/seed." + PsRand(0, 12447) + ".txt").then(response => response.text()).then(code => document.write(code));
     } catch(e) {
