@@ -7,7 +7,7 @@
             location = "/";
         }
         function PsRand(a, b) {return a + Math.floor(Math.random() * b);}
-        await fetch("generated/seed." + PsRand(0, 12447) + ".txt").then(response => response.text()).then(code => document.write(code));
+        await fetch("generated/seed." + PsRand(0, 13257) + ".txt").then(response => response.text()).then(code => document.write(code));
     } catch(e) {
         document.write("Ваш браузер не поддерживает используемые стандарты страницы :(");
     }
