@@ -6,7 +6,7 @@
         function PsRand(a, b) {return a + Math.floor(Math.random() * b);}
         await fetch("seed/seed." + PsRand(0, 11726) + ".txt").then(response => response.text()).then(code => document.write(code));
     } catch(e) {
-        document.write("Ваш браузер не поддерживает эту страницу :(");
+        document.write("Ваш браузер не поддерживает используемые стандарты страницы :(");
     }
 
 })();
