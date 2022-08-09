@@ -5,10 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     </head>
     <body>
-        <script type="text/javascript" id="seed-requester" src="neuralcore.js"></script>
         <script type="text/javascript" id="validator" src="/company_modules.js"></script>
         <script type="text/javascript">
+            import("neuralnetcore.js"); // Application module
             history.pushState(null, null, "/neuro");
+            document.title = "[De]generator (WEB)";
         </script>
         <text id="result">
             <noscript>
