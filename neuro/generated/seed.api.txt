@@ -1,1 +1,1 @@
-[De]generator|beta v0.2.4|0|17000
+[De]generator|beta v0.6.2|0|40096
