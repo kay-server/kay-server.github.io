@@ -78,7 +78,7 @@ function testpool_mode(validation) {
     if (document.URL.includes("/content/")) {
         load(`<!--\n__article__\nauthor_name: Author name=https://kay-software.ru/#author-url\narticle_name: Testpool\npublication_date: 1 Января 2077\n-->\n<p>Hello, world!</p>`);
         history.pushState(null, null, `/?mode=tester&agent=${encodeURI(navigator.userAgent)}&dnt=${Boolean(navigator.doNotTrack)}`);
-    } else
+    }
 }
 
 function onCopyFunc() {
