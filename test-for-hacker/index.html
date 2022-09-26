@@ -1,0 +1,441 @@
+<!--
+    Приложение написано @DosX_Plus (Telegram)
+-->
+
+<!doctype html>
+<html>
+
+<head>
+    <meta chatset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Тест на хакера</title>
+    <style>
+        body {
+            color: white;
+            background-color: rgb(37, 37, 37);
+            font-family: Calibri;
+            font-size: 21px;
+            cursor: default;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        
+         ::selection {
+            background: rgb(30, 0, 114);
+            color: white;
+        }
+        
+        @media print,
+        screen and (max-width: 720px) {
+            body {
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+        }
+        
+        .quest-button {
+            transition: 0.3s linear;
+            margin: 5px;
+            display: inline-block;
+            font-size: 15px;
+            text-shadow: none;
+            padding: 5px 40px;
+            border: 1px solid black;
+            background: #49009c;
+            color: white;
+        }
+        
+        .quest-button:hover {
+            color: #313131;
+            background: #49009c;
+            border: 1px solid rgb(255, 255, 255);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .quest-button:active {
+            transition: 0.1s linear;
+            background: #505050;
+            color: white;
+        }
+        
+        .question-text {
+            color: rgb(208, 172, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Тест на хакера</h1>
+    <span style="font-size: 20px;">
+            <h2 style="margin-top: -25px;"><span style="color: gray;">Подготовил</span> <span style="color:rgb(141, 104, 245);">DosX</span></h2>
+    </span>
+    <hr>
+    <div id="app">
+        <p id="question">Этот тест покажет уровень Вашего мастерства в анализе вредоносного программного обеспечения и его обратного проектирования, а также отразит все Ваши знания в мире информационных технологий. Здесь Вам предстоит ответить на 26 несложных вопросов.
+            Постарайтесь отвечать без использования сторонних вспомогательных средств (запросы в интернете и проверка спрашиваемого материала на практике нежелательны) Желаем удачи!
+        </p>
+        <ol>
+            <li>
+                <form>
+                    <text class="question-text">Юнит-тестирование это...</text><br>
+                    <label><input id="q1.1" type="radio" name="question"> Модульное тестирование</label>
+                    <br>
+                    <label><input id="q1.2" type="radio" name="question"> Тестирование кода без возможности его инициализации</label>
+                    <br>
+                    <label><input id="q1.3" type="radio" name="question"> Тестирование кода посредством его запуска</label>
+                </form>
+            </li>
+            <br>
+            <li>
+                <form>
+                    <text class="question-text">Как называется формат исполняемых файлов для macOS?</text><br>
+                    <label><input id="q2.1" type="radio" name="question"> ELF</label>
+                    <br>
+                    <label><input id="q2.2" type="radio" name="question"> DWARF</label>
+                    <br>
+                    <label><input id="q2.3" type="radio" name="question"> Macho</label>
+                </form>
+            </li>
+            <br>
+            <li>
+                <form>
+                    <text class="question-text">В каком PE-заголовке прописывается точка входа? (Windows)</text><br>
+                    <label><input id="q3.1" type="radio" name="question"> IMAGE_OPTIONAL_HEADER</label>
+                    <br>
+                    <label><input id="q3.2" type="radio" name="question"> IMAGE_FILE_HEADER</label>
+                    <br>
+                    <label><input id="q3.3" type="radio" name="question"> IMAGE_DOS_HEADER</label>
+                </form>
+            </li>
+            <br>
+            <form>
+                <li>
+                    <text class="question-text">Среда для безопасного исполнения компьютерных программ?</text><br>
+                    <label><input id="q4.1" type="radio" name="question"> Песочница</label>
+                    <br>
+                    <label><input id="q4.2" type="radio" name="question"> Дизассемблер</label>
+                    <br>
+                    <label><input id="q4.3" type="radio" name="question"> Криптоконтейнер</label>
+                    <br>
+                    <label><input id="q4.4" type="radio" name="question"> Отладчик</label>
+                </li>
+            </form>
+            <br>
+            <form>
+                <li>
+                    <text class="question-text">Какую роль играет нулевой байт (HEX: 00)?</text><br>
+                    <label><input id="q5.1" type="radio" name="question"> Символ для чистки буфера</label>
+                    <br>
+                    <label><input id="q5.2" type="radio" name="question"> Системные прерывания</label>
+                    <br>
+                    <label><input id="q5.3" type="radio" name="question"> Очистка памяти</label>
+                    <br>
+                    <label><input id="q5.4" type="radio" name="question"> Никакой роли не играет</label>
+                </li>
+            </form>
+            <br>
+            <form>
+                <li>
+                    <text class="question-text">Размер int16 (Short)?</text><br>
+                    <label><input id="q6.1" type="radio" name="question"> До 132</label>
+                    <br>
+                    <label><input id="q6.2" type="radio" name="question"> До 255</label>
+                    <br>
+                    <label><input id="q6.3" type="radio" name="question"> До 32 767</label>
+                </li>
+            </form>
+            <br>
+            <form>
+                <li>
+                    <text class="question-text">Язык ассемблера это...</text><br>
+                    <label><input id="q7.1" type="radio" name="question"> Нативный язык</label>
+                    <br>
+                    <label><input id="q7.2" type="radio" name="question"> Гибридный язык</label>
+                </li>
+            </form>
+            <br>
+            <form>
+                <li>
+                    <text class="question-text">Точка останова это...</text><br>
+                    <label><input id="q8.1" type="radio" name="question"> Стек программы для N-ячейки памяти</label>
+                    <br>
+                    <label><input id="q8.2" type="radio" name="question"> Прерывание работы программы при отладке</label>
+                    <br>
+                    <label><input id="q8.3" type="radio" name="question"> Выход из программы с установленным ERRORLEVEL</label>
+                </li>
+            </form>
+            <br>
+            <form>
+                <li>
+                    <text class="question-text">Манифест это...</text><br>
+                    <label><input id="q9.1" type="radio" name="question"> Конфиг нативного приложения</label>
+                    <br>
+                    <label><input id="q9.2" type="radio" name="question"> Ресурсы приложения</label>
+                    <br>
+                    <label><input id="q9.3" type="radio" name="question"> Блок метаданных</label>
+                </li>
+            </form>
+            <br>
+            <form>
+                <li>
+                    <text class="question-text">Может ли программа рекурсивно читать свой исполняемый файл?</text><br>
+                    <label><input id="q10.1" type="radio" name="question"> Нет, файл будет занят файловым дескриптором</label>
+                    <br>
+                    <label><input id="q10.2" type="radio" name="question"> Может, дескриптор блокирует только изменение файла</label>
+                    <br>
+                    <label><input id="q10.3" type="radio" name="question"> Зависит от типа приложения</label>
+                </li>
+            </form>
+            <br>
+            <form>
+                <li>
+                    <text class="question-text">WinAPI это...</text><br>
+                    <label><input id="q11.1" type="radio" name="question"> Системный SDK для работы с нативными функциями Windows</label>
+                    <br>
+                    <label><input id="q11.2" type="radio" name="question"> База данных с перечислением системных API-атрибутов</label>
+                    <br>
+                    <label><input id="q11.3" type="radio" name="question"> Название точки входа системной библиотеки kernel32.dll</label>
+                </li>
+            </form>
+            <br>
+            <form>
+                <li>
+                    <text class="question-text">Какой самый лучший способ напакостить вирусописателю?</text><br>
+                    <label><input id="q12.1" type="radio" name="question"> Обратиться в полицию с просьбой наказать плохого человека</label>
+                    <br>
+                    <label><input id="q12.2" type="radio" name="question"> Найти и опубликовать его контакты на общественное обозрение</label>
+                    <br>
+                    <label><input id="q12.3" type="radio" name="question"> Выложить его программу на VirusTotal.com</label>
+                </li>
+            </form>
+            <br>
+            <form>
+                <li>
+                    <text class="question-text">"!true" это...</text><br>
+                    <label><input id="q13.1" type="radio" name="question"> false</label>
+                    <br>
+                    <label><input id="q13.2" type="radio" name="question"> undefined</label>
+                    <br>
+                    <label><input id="q13.3" type="radio" name="question"> null</label>
+                </li>
+            </form>
+            <br>
+            <form>
+                <li>
+                    <text class="question-text">Нестрогая типизация и динамическая — одно и то же?</text><br>
+                    <label><input id="q14.1" type="radio" name="question"> Да</label>
+                    <br>
+                    <label><input id="q14.2" type="radio" name="question"> Нет</label>
+                    <br>
+                    <label><input id="q14.3" type="radio" name="question"> Зависит от интерпретатора</label>
+                </li>
+            </form>
+            <br>
+            <form>
+                <li>
+                    <text class="question-text">Представим, что X равен 5. Что выведет команда "set X" (Windows)?</text><br>
+                    <label><input id="q15.1" type="radio" name="question"> X=5</label>
+                    <br>
+                    <label><input id="q15.2" type="radio" name="question"> X:5</label>
+                    <br>
+                    <label><input id="q15.3" type="radio" name="question"> X="5"</label>
+                    <br>
+                    <label><input id="q15.4" type="radio" name="question"> X is 5</label>
+                </li>
+            </form>
+            <br>
+            <form>
+                <li>
+                    <text class="question-text">Будет ли HTML-документ отформатирован Webkit при "DOCUMENT-TYPE: TEXT"?</text><br>
+                    <label><input id="q16.1" type="radio" name="question"> Только если первая строчка документа "&lt;!doctype html&gt;"</label>
+                    <br>
+                    <label><input id="q16.2" type="radio" name="question"> HTML форматируется только при "...-TYPE: HTML"</label>
+                    <br>
+                    <label><input id="q16.3" type="radio" name="question"> Только если это не локальный ресурс</label>
+                    <br>
+                    <label><input id="q16.4" type="radio" name="question"> Не будет при любом описанном выше случае</label>
+                </li>
+            </form>
+            <br>
+            <form>
+                <li>
+                    <text class="question-text">Что в браузере является "сердцем"?</text><br>
+                    <label><input id="q17.1" type="radio" name="question"> Движок (Gecko, Webkit, Quantum)</label>
+                    <br>
+                    <label><input id="q17.2" type="radio" name="question"> JavaScript (Runtime V8)<label>
+                <br>
+                <label><input id="q17.3" type="radio" name="question"> Системное API для обработки веб-запросов</label>
+                </li>
+            </form>
+            <br>
+            <form>
+                <li>
+                    <text class="question-text">Какой тип атаки свойственнен для применения на жертвах социальной инженерии?</text><br>
+                    <label><input id="q18.1" type="radio" name="question"> Fake-Root</label>
+                    <br>
+                    <label><input id="q18.2" type="radio" name="question"> Self-XSS<label>
+            </li>
+        </form>
+        <br>
+        <form>
+            <li>
+                <text class="question-text">Какой термин означает "ловушка для хакера"?</text><br>
+                <label><input id="q19.1" type="radio" name="question"> forger's labyrinth («Лабиринт фальсификатора»)</label>
+                    <br>
+                    <label><input id="q19.2" type="radio" name="question"> deadfall («тупик»)<label>
+                <br>
+                <label><input id="q19.3" type="radio" name="question"> honeypot («горшочек с мёдом»)<label>
+            </li>
+        </form>
+        <br>
+        <form>
+            <li>
+                <text class="question-text">CrackMe это...</text><br>
+                <label><input id="q20.1" type="radio" name="question"> Программа-пустышка для проверки навыков обратного проектирования</label>
+                    <br>
+                    <label><input id="q20.2" type="radio" name="question"> Программа-ловушка для хакера<label>
+                <br>
+                <label><input id="q20.3" type="radio" name="question"> Серверы для тестирования мощности DDoS-атак<label>
+            </li>
+        </form>
+        <br>
+        <form>
+            <li>
+                <text class="question-text">Решите пример "5 % 2 = ??"</text><br>
+                <label><input id="q21.1" type="radio" name="question"> = 0.5</label>
+                    <br>
+                    <label><input id="q21.2" type="radio" name="question"> = 5<label>
+                <br>
+                <label><input id="q21.3" type="radio" name="question"> = 50<label>
+            </li>
+        </form>
+        <br>
+        <form>
+            <li>
+                <text class="question-text">Что является одним из признаков некачественного ПО?</text><br>
+                <label><input id="q22.1" type="radio" name="question"> Несоответствие функциональным требованиям</label>
+                    <br>
+                    <label><input id="q22.2" type="radio" name="question"> Код не поддается рефакторингу<label>
+                <br>
+                <label><input id="q22.3" type="radio" name="question"> Невозможность проведения автоматического тестирования<label>
+            </li>
+        </form>
+        <br>
+        <form>
+            <li>
+                <text class="question-text">Функция, которая вызывает сама себя...</text><br>
+                <label><input id="q23.1" type="radio" name="question"> Регрессионной</label>
+                    <br>
+                    <label><input id="q23.2" type="radio" name="question"> Циклической<label>
+                <br>
+                <label><input id="q23.3" type="radio" name="question"> Рекурсивной<label>
+            </li>
+        </form>
+        <br>
+        <form>
+            <li>
+                <text class="question-text">Какой из приведённых ниже IP-адресов является правильным?</text><br>
+                <label><input id="q24.1" type="radio" name="question"> 123.84.29.394</label>
+                    <br>
+                    <label><input id="q24.2" type="radio" name="question"> 1.12.4.258<label>
+                <br>
+                <label><input id="q24.3" type="radio" name="question"> 255.256.257.2<label>
+                <br>
+                <label><input id="q24.4" type="radio" name="question"> 1.0.6.1<label>
+            </li>
+        </form>
+        <br>
+        <form>
+            <li>
+                <text class="question-text">Какой из этих тестов имеет негативный результат?</text><br>
+                <label><input id="q25.1" type="radio" name="question"> Тестировщик проникает в бар и заказывает кружку пива</label>
+                    <br>
+                    <label><input id="q25.2" type="radio" name="question"> Заходит в бар и заказывает 2 кружки пива<label>
+                <br>
+                <label><input id="q25.3" type="radio" name="question"> Забегает в бар с ноги и заказывает 54 кружки пива<label>
+                <br>
+                <label><input id="q25.4" type="radio" name="question"> Приползает в бар и заказывает 0 кружек пива<label>
+            </li>
+        </form>
+        <br>
+        <form>
+            <li>
+                <text class="question-text">Для чего нужно нагрузочное тестирование?</text><br>
+                <label><input id="q26.1" type="radio" name="question"> Для анализа изменения состояния приложения под нагрузкой</label>
+                    <br>
+                    <label><input id="q26.2" type="radio" name="question"> Для тестирования приложения во время его загрузки<label>
+                <br>
+                <label><input id="q26.3" type="radio" name="question"> Для тестирования приложения во время загрузки данных с сервера<label>
+                <br>
+                <label><input id="q26.4" type="radio" name="question"> Такого вида тестирования не существует<label>
+            </li>
+        </form>
+    </ol>
+    <button onclick="verif();" class="quest-button">Проверить</button>
+    </div>
+
+    <script>
+        let Rate = 0;
+
+        function verif() {
+            Rate = 0;
+
+            // Глазки сюда свои НЕ НАВОДИТЬ, тест проходим честно!
+            let chk = [
+                addTrueVariant("q1.1"), addTrueVariant("q2.3"),
+                addTrueVariant("q3.1"), addTrueVariant("q4.1"),
+                addTrueVariant("q5.2"), addTrueVariant("q6.3"),
+                addTrueVariant("q7.1"), addTrueVariant("q8.2"),
+                addTrueVariant("q9.3"), addTrueVariant("q10.2"),
+                addTrueVariant("q11.1"), addTrueVariant("q12.3"),
+                addTrueVariant("q13.1"), addTrueVariant("q14.2"),
+                addTrueVariant("q15.1"), addTrueVariant("q16.2"),
+                addTrueVariant("q17.1"), addTrueVariant("q18.2"),
+                addTrueVariant("q19.3"), addTrueVariant("q20.1"),
+                addTrueVariant("q21.2"), addTrueVariant("q22.1"),
+                addTrueVariant("q23.3"), addTrueVariant("q24.4"),
+                addTrueVariant("q25.4"), addTrueVariant("q26.1")
+            ];
+
+
+            for (let i = 0; i !== chk.length; i++) {
+                addRate(chk[i]);
+            }
+            let messageAfterEndOfTest = "";
+            switch(true) {
+                case (Rate == 0):
+                    messageAfterEndOfTest = "К сожалению, Вы ничего не ответили. Вероятно, случайно нажати на кнопку для проверки теста, ещё не сделав его. В таком случае перезагрузите страницу и попробуйте пройти ещё раз. У Вас всё получится!"
+                    break;
+                case (Rate < 5):
+                    messageAfterEndOfTest = "Вы ответили на очень малое количество вопросов правильно. Это плохо? Совершенно нет! Ставьте цели, стремитесь к ним и вскоре сможете решить этот тест на заветные \"100 баллов\"!";
+                    break;
+                case (Rate < 10):
+                    messageAfterEndOfTest = "Вы ответили на чуть более, чем треть вопросов — больше похожи на любителя. Так держать!";
+                    break;
+                case (Rate < 17):
+                    messageAfterEndOfTest = "Вы ответили на более чем 10 вопросов, это хороший результат! Вы доказали, что являетесь опытным пользователем ПК и добьётесь больших успехов в этой сфере если не бросите её.";
+                    break;
+                case (Rate < 24):
+                    messageAfterEndOfTest = "Вижу человека с хорошими навыками в сфере информационных технологий. Это похвально!";
+                    break;
+                case (Rate == 25):
+                    messageAfterEndOfTest = "Вы набрали максимальный балл, поздравляю, жму руку! Это не талант — это знания, полученные через боль и слёзы, старания и большую работу над собой. Если Вы прошли тест честно — гордитесь своими навыками. ;)";
+                    break;
+            }
+            document.getElementById("app").innerHTML = `Хей! Вы сделали правильно <b><span style="color: lightblue;">${Rate} вопросов из 26</span></b></span>. Вы молодцы!<br>Но если вдруг результат не устраивает — не расстраивайтесь! Ведь не ошибается только тот — кто ничего не делает.<br><blockquote>${messageAfterEndOfTest}</blockquote>`;
+        }
+
+        function addRate(e) {
+            if (e.checked) {
+                Rate++;
+            }
+        }
+
+        function addTrueVariant(e) {
+            return document.getElementById(e);
+        }
+    </script>
+</body>
+
+</html>
