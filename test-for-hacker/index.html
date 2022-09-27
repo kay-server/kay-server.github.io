@@ -94,7 +94,7 @@
                     <br>
                     <label><input id="q2.2" type="radio" name="question"> DWARF</label>
                     <br>
-                    <label><input id="q2.3" type="radio" name="question"> Macho</label>
+                    <label><input id="q2.3" type="radio" name="question"> Mach-O</label>
                 </form>
             </li>
             <br>
@@ -125,7 +125,7 @@
             <br>
             <form>
                 <li>
-                    <text class="question-text">Какую роль играет нулевой байт (HEX: 00)?</text><br>
+                    <text class="question-text">Какую роль играет нулевой байт (HEX: 00) в исполняемых файлах Windows?</text><br>
                     <label><input id="q5.1" type="radio" name="question"> Символ для чистки буфера</label>
                     <br>
                     <label><input id="q5.2" type="radio" name="question"> Системные прерывания</label>
@@ -192,7 +192,7 @@
             <form>
                 <li>
                     <text class="question-text">WinAPI это...</text><br>
-                    <label><input id="q11.1" type="radio" name="question"> Системный SDK для работы с нативными функциями Windows</label>
+                    <label><input id="q11.1" type="radio" name="question"> Системный API из совокупности SDK для работы с нативными функциями Windows</label>
                     <br>
                     <label><input id="q11.2" type="radio" name="question"> База данных с перечислением системных API-атрибутов</label>
                     <br>
@@ -207,7 +207,7 @@
                     <br>
                     <label><input id="q12.2" type="radio" name="question"> Найти и опубликовать его контакты на общественное обозрение</label>
                     <br>
-                    <label><input id="q12.3" type="radio" name="question"> Выложить его программу на VirusTotal.com</label>
+                    <label><input id="q12.3" type="radio" name="question"> Выложить плод его трудов на VirusTotal.com</label>
                 </li>
             </form>
             <br>
@@ -248,7 +248,7 @@
             <br>
             <form>
                 <li>
-                    <text class="question-text">Будет ли HTML-документ отформатирован Webkit при "DOCUMENT-TYPE: TEXT"?</text><br>
+                    <text class="question-text">Будет ли HTML-документ отформатирован Webkit при "DOCUMENT-TYPE: TEXT" в заголовке ответа от сервера?</text><br>
                     <label><input id="q16.1" type="radio" name="question"> Только если первая строчка документа "&lt;!doctype html&gt;"</label>
                     <br>
                     <label><input id="q16.2" type="radio" name="question"> HTML форматируется только при "...-TYPE: HTML"</label>
@@ -261,10 +261,10 @@
             <br>
             <form>
                 <li>
-                    <text class="question-text">Что в браузере является "сердцем"?</text><br>
+                    <text class="question-text">Что в браузере является "сердцем" для открытия и рендеринга страниц?</text><br>
                     <label><input id="q17.1" type="radio" name="question"> Движок (Gecko, Webkit, Quantum)</label>
                     <br>
-                    <label><input id="q17.2" type="radio" name="question"> JavaScript (Runtime V8)<label>
+                    <label><input id="q17.2" type="radio" name="question"> JavaScript (Runtime V8)</label>
                     <br>
                     <label><input id="q17.3" type="radio" name="question"> Системное API для обработки веб-запросов</label>
                 </li>
@@ -275,25 +275,25 @@
                     <text class="question-text">Какой тип атаки свойственнен для применения на жертвах социальной инженерии?</text><br>
                     <label><input id="q18.1" type="radio" name="question"> Fake-Root</label>
                     <br>
-                    <label><input id="q18.2" type="radio" name="question"> Self-XSS<label>
+                    <label><input id="q18.2" type="radio" name="question"> Self-XSS</label>
                 </li>
             </form>
-        <br>
-        <form>
-            <li>
-                <text class="question-text">Какой термин означает "ловушка для хакера"?</text><br>
-                <label><input id="q19.1" type="radio" name="question"> forger's labyrinth («Лабиринт фальсификатора»)</label>
+            <br>
+            <form>
+                <li>
+                    <text class="question-text">Какой термин означает "ловушка для хакера"?</text><br>
+                    <label><input id="q19.1" type="radio" name="question"> forger's labyrinth («Лабиринт фальсификатора»)</label>
                     <br>
-                    <label><input id="q19.2" type="radio" name="question"> deadfall («тупик»)<label>
-                <br>
-                <label><input id="q19.3" type="radio" name="question"> honeypot («горшочек с мёдом»)<label>
-            </li>
-        </form>
-        <br>
-        <form>
-            <li>
-                <text class="question-text">CrackMe это...</text><br>
-                <label><input id="q20.1" type="radio" name="question"> Программа-пустышка для проверки навыков обратного проектирования</label>
+                    <label><input id="q19.2" type="radio" name="question"> deadfall («тупик»)</label>
+                    <br>
+                    <label><input id="q19.3" type="radio" name="question"> honeypot («горшочек с мёдом»)</label>
+                </li>
+            </form>
+            <br>
+            <form>
+                <li>
+                    <text class="question-text">CrackMe это...</text><br>
+                    <label><input id="q20.1" type="radio" name="question"> Программа-пустышка для проверки навыков обратного проектирования</label>
                     <br>
                     <label><input id="q20.2" type="radio" name="question"> Программа-ловушка для хакера<label>
                 <br>
@@ -306,74 +306,76 @@
                 <text class="question-text">Решите пример "5 % 2 = ??"</text><br>
                 <label><input id="q21.1" type="radio" name="question"> = 0.5</label>
                     <br>
-                    <label><input id="q21.2" type="radio" name="question"> = 5<label>
-                <br>
-                <label><input id="q21.3" type="radio" name="question"> = 50<label>
-            </li>
-        </form>
-        <br>
-        <form>
-            <li>
-                <text class="question-text">Что является одним из признаков некачественного ПО?</text><br>
-                <label><input id="q22.1" type="radio" name="question"> Несоответствие функциональным требованиям</label>
+                    <label><input id="q21.2" type="radio" name="question"> = 1</label>
                     <br>
-                    <label><input id="q22.2" type="radio" name="question"> Код не поддается рефакторингу<label>
-                <br>
-                <label><input id="q22.3" type="radio" name="question"> Невозможность проведения автоматического тестирования<label>
-            </li>
-        </form>
-        <br>
-        <form>
-            <li>
-                <text class="question-text">Функция, которая вызывает сама себя...</text><br>
-                <label><input id="q23.1" type="radio" name="question"> Регрессионная</label>
+                    <label><input id="q21.3" type="radio" name="question"> = 5</label>
                     <br>
-                    <label><input id="q23.2" type="radio" name="question"> Циклическая<label>
-                <br>
-                <label><input id="q23.3" type="radio" name="question"> Рекурсивная<label>
-            </li>
-        </form>
-        <br>
-        <form>
-            <li>
-                <text class="question-text">Какой из приведённых ниже IP-адресов является правильным?</text><br>
-                <label><input id="q24.1" type="radio" name="question"> 123.84.29.394</label>
+                    <label><input id="q21.4" type="radio" name="question"> = 50</label>
+                </li>
+            </form>
+            <br>
+            <form>
+                <li>
+                    <text class="question-text">Что является одним из признаков некачественного ПО?</text><br>
+                    <label><input id="q22.1" type="radio" name="question"> Несоответствие функциональным требованиям</label>
                     <br>
-                    <label><input id="q24.2" type="radio" name="question"> 1.12.4.258<label>
-                <br>
-                <label><input id="q24.3" type="radio" name="question"> 255.256.257.2<label>
-                <br>
-                <label><input id="q24.4" type="radio" name="question"> 1.0.6.1<label>
-            </li>
-        </form>
-        <br>
-        <form>
-            <li>
-                <text class="question-text">Какой из этих тестов имеет негативный результат?</text><br>
-                <label><input id="q25.1" type="radio" name="question"> Тестировщик проникает в бар и заказывает кружку пива</label>
+                    <label><input id="q22.2" type="radio" name="question"> Код не поддается рефакторингу</label>
                     <br>
-                    <label><input id="q25.2" type="radio" name="question"> Заходит в бар и заказывает 2 кружки пива<label>
-                <br>
-                <label><input id="q25.3" type="radio" name="question"> Забегает в бар с ноги и заказывает 54 кружки пива<label>
-                <br>
-                <label><input id="q25.4" type="radio" name="question"> Приползает в бар и заказывает 0 кружек пива<label>
-            </li>
-        </form>
-        <br>
-        <form>
-            <li>
-                <text class="question-text">Для чего нужно нагрузочное тестирование?</text><br>
-                <label><input id="q26.1" type="radio" name="question"> Для анализа изменения состояния приложения под нагрузкой</label>
+                    <label><input id="q22.3" type="radio" name="question"> Невозможность проведения автоматического тестирования</label>
+                </li>
+            </form>
+            <br>
+            <form>
+                <li>
+                    <text class="question-text">Функция, которая вызывает сама себя...</text><br>
+                    <label><input id="q23.1" type="radio" name="question"> Регрессионная</label>
                     <br>
-                    <label><input id="q26.2" type="radio" name="question"> Для тестирования приложения во время его загрузки<label>
-                <br>
-                <label><input id="q26.3" type="radio" name="question"> Для тестирования приложения во время загрузки данных с сервера<label>
-                <br>
-                <label><input id="q26.4" type="radio" name="question"> Такого вида тестирования не существует<label>
-            </li>
-        </form>
-    </ol>
-    <button onclick="verif();" class="quest-button">Проверить</button>
+                    <label><input id="q23.2" type="radio" name="question"> Циклическая</label>
+                    <br>
+                    <label><input id="q23.3" type="radio" name="question"> Рекурсивная</label>
+                </li>
+            </form>
+            <br>
+            <form>
+                <li>
+                    <text class="question-text">Какой из приведённых ниже IP-адресов является правильным?</text><br>
+                    <label><input id="q24.1" type="radio" name="question"> 123.84.29.394</label>
+                    <br>
+                    <label><input id="q24.2" type="radio" name="question"> 1.12.4.258</label>
+                    <br>
+                    <label><input id="q24.3" type="radio" name="question"> 255.256.257.2</label>
+                    <br>
+                    <label><input id="q24.4" type="radio" name="question"> 1.0.6.1</label>
+                </li>
+            </form>
+            <br>
+            <form>
+                <li>
+                    <text class="question-text">Какой из этих тестов имеет негативный результат?</text><br>
+                    <label><input id="q25.1" type="radio" name="question"> Тестировщик проникает в бар и заказывает кружку пива</label>
+                    <br>
+                    <label><input id="q25.2" type="radio" name="question"> Заходит в бар и заказывает 2 кружки пива</label>
+                    <br>
+                    <label><input id="q25.3" type="radio" name="question"> Забегает в бар с ноги и заказывает 54 кружки пива</label>
+                    <br>
+                    <label><input id="q25.4" type="radio" name="question"> Приползает в бар и заказывает 0 кружек пива</label>
+                </li>
+            </form>
+            <br>
+            <form>
+                <li>
+                    <text class="question-text">Для чего нужно нагрузочное тестирование?</text><br>
+                    <label><input id="q26.1" type="radio" name="question"> Для анализа изменения состояния приложения под нагрузкой</label>
+                    <br>
+                    <label><input id="q26.2" type="radio" name="question"> Для тестирования приложения во время его загрузки</label>
+                    <br>
+                    <label><input id="q26.3" type="radio" name="question"> Для тестирования приложения во время загрузки данных с сервера</label>
+                    <br>
+                    <label><input id="q26.4" type="radio" name="question"> Такого вида тестирования не существует</label>
+                </li>
+            </form>
+        </ol>
+        <button onclick="verif();" class="quest-button">Проверить</button>
     </div>
 
     <script>
@@ -404,7 +406,7 @@
                 addRate(chk[i]);
             }
             let messageAfterEndOfTest = "";
-            switch(true) {
+            switch (true) {
                 case (Rate == 0):
                     messageAfterEndOfTest = "К сожалению, Вы ничего не ответили. Вероятно, случайно нажали на кнопку для проверки теста, ещё не выполнив его. В таком случае перезагрузите страницу и попробуйте пройти ещё раз. У Вас всё получится!"
                     break;
